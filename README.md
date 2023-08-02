@@ -1,34 +1,38 @@
-# My Hobby Site
+<a name="readme-top"></a>
 
-This repository contains files for a website about baking, including HTML code for the home page, contact page, and about page.
+<div align="center">
+  <a href="https://github.com/seesmof/">
+    <img src="./public/logo.png" alt="Logo" height="80">
+  </a>
 
-## Home Page
+<h1 align="center">My Hobby Site</h1>
+</div>
 
-The home page HTML code includes a header with a logo and a horizontal line, as well as a main section with two columns. The left column contains text introducing the website and its purpose, while the right column contains an image of a kitchen. Here are some highlights:
+## Table of contents
 
-- The page uses semantic HTML elements, such as `<header>`, `<main>`, and `<div>` with class names.
-- The logo is linked to the home page using an `<a>` element with an `href` attribute pointing to `#`.
-- The main section is divided into two columns using the `flex` display property and CSS styling.
-- The left column contains two paragraphs of text, including strong and emphasis elements for emphasis and a link to the home page.
-- The right column contains an image with an `alt` attribute for accessibility.
+- [Table of contents](#table-of-contents)
+- [About](#about)
+- [Screenshots](#screenshots)
+- [Links](#links)
+- [License](#license)
 
-## Contact Page
+## About
 
-The contact page HTML code includes a header with a logo and a horizontal line, as well as a main section with one column of text. The text encourages visitors to get in touch using a form. Here are some highlights:
+This repository contains a hobby website made a long time ago. Made with HTML and CSS.
 
-- The page uses semantic HTML elements, such as `<header>`, `<main>`, and `<div>` with class names.
-- The logo is linked to the home page using an `<a>` element with an `href` attribute pointing to `#`.
-- The main section contains two paragraphs of text, including a call-to-action to use the form.
-- The form is not included in this repository.
+## Screenshots
 
-## About Page
+![The app in mobile view](./public/mobile.png)
 
-The about page HTML code includes a header with a logo and a horizontal line, as well as a main section with two columns. The left column contains text introducing the author's passion for baking, while the right column contains an image of the author. Here are some highlights:
+![The app in desktop view](./public/desktop.png)
 
-- The page uses semantic HTML elements, such as `<header>`, `<main>`, and `<div>` with class names.
-- The logo is linked to the home page using an `<a>` element with an `href` attribute pointing to `#`.
-- The main section is divided into two columns using the `flex` display property and CSS styling.
-- The left column contains one paragraph of text.
-- The right column contains an image with an `alt` attribute for accessibility.
+## Links
 
-Overall, this repository provides a starting point for a simple website about baking, with HTML code for the home page, contact page, and about page. Additional files, such as CSS styling and JavaScript functionality, can be added to enhance the website's appearance and functionality.
+- [Live Preview](https://seesmof.github.io/my-hobby-site/)
+- [Icon](https://www.flaticon.com/free-icons/)
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+<p align="right"><a href="#readme-top"><strong>Back to top</strong></a></p>
