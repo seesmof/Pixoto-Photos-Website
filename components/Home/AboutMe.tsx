@@ -8,18 +8,20 @@ const AboutMe = () => {
         <img
           src="/mainAboutMe.jpg"
           alt="a picture of a man standing, holding a camera in his hands, looking in the camera and smiling"
-          className="rounded-full outline outline-offset-[12px] outline-slate-500 outline-1 object-cover self-center max-w-sm"
+          className="rounded-full outline outline-offset-[12px] outline-slate-500 outline-1 object-cover self-center max-w-sm mt-4"
         />
         <h3 className="subheading pt-12">about me</h3>
         <h2 className="heading">
           We're the leading photo studio in the country
         </h2>
         <p className="paragraph">
-          It is a long established fact that a reader will be distr by the
-          readabll content of a page when looking at its layout. The point of
-          using Lorel Ipsum is that it has a more-or-less normal distribution of
-          letters oppo to using Content here, content here making it look like
-          readabl Englis Many desktop publishing packages and.
+          Welcome to our photography studio, where moments come to life through
+          the lens. Our passion for capturing the essence of every occasion
+          drives us to create stunning visual stories. With a dedication to
+          quality and creativity, we believe in the power of images to convey
+          emotions and tell narratives. From weddings to corporate events, our
+          team is committed to transforming fleeting instants into timeless
+          memories that you'll cherish forever.
         </p>
         <button className="btn btn-fill">
           Learn More
