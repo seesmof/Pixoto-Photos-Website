@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background text-slate-50 flex flex-col">
+        {/* container max-w-6xl */}
         <Navbar />
         <Hero />
         <AboutMe />

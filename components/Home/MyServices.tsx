@@ -11,58 +11,58 @@ interface ServiceCardProps {
 const ServiceCard = ({ image, heading, paragraph }: ServiceCardProps) => {
   return (
     <>
-      <div className="bg-background rounded-md p-4 flex flex-col">
-        <img src={`/mainServices${image}.svg`} className="" />
+      <div className="bg-background rounded-md p-6 flex flex-col">
+        <img src={`/mainServices${image}.svg`} className="w-16 py-4" />
         <h3 className="heading">{heading}</h3>
-        <p className="paragraph">{paragraph}</p>
+        <p className="text-lg text-slate-200 pt-3 pb-6">{paragraph}</p>
         <a
           href="https://github.com/seesmof"
-          className="flex flex-row items-center gap-2"
+          className="flex flex-row items-center gap-2 font-medium"
         >
           Read More
-          <BsArrowRight className="text-xl" />
+          <BsArrowRight className="text-xl stroke-[.5]" />
         </a>
       </div>
     </>
   );
 };
 
-const ServicesData: ServiceCardProps = [
+const ServicesData = [
   {
     image: "Aerial",
     heading: "Aerial Photography",
     paragraph:
-      "Our photography packages vary depending on the type of service you require.",
+      "Capture stunning aerial views from above with our drone photography services.",
   },
   {
     image: "Video",
     heading: "Videography",
     paragraph:
-      "Our photography packages vary depending on the type of service you require.",
+      "Immortalize your special moments through professional videography and cinematography services.",
   },
   {
     image: "Photo",
     heading: "Photography",
     paragraph:
-      "Our photography packages vary depending on the type of service you require.",
+      "Preserve life's precious memories with timeless professional photography services.",
   },
   {
     image: "Snapshot",
     heading: "Snapshot Studios",
     paragraph:
-      "Our photography packages vary depending on the type of service you require.",
+      "Get quick on-location photoshoots and headshots at our convenient studio.",
   },
   {
     image: "Flash",
     heading: "Flash Photography",
     paragraph:
-      "Our photography packages vary depending on the type of service you require.",
+      "Illuminate dim scenes with our expert flash and lighting equipment and techniques.",
   },
   {
     image: "Flashy",
     heading: "Flashy Frames",
     paragraph:
-      "Our photography packages vary depending on the type of service you require.",
+      "Add some flash and pizzazz to your photos with fun prints and customized framing.",
   },
 ];
 
@@ -76,11 +76,11 @@ const AboutMe = () => {
           All Services
           <BsArrowRight className="text-xl" />
         </button>
-        <ServiceCard
-          image={ServicePhotos[0]}
-          heading="Photography"
-          paragraph="We can capture beautiful aerial photos."
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+          {ServicesData.map((service) => (
+            <ServiceCard {...service} key={service.heading} />
+          ))}
+        </div>
       </div>
     </>
   );
