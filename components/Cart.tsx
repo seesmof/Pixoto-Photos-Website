@@ -9,7 +9,7 @@ const Cart = ({ setIsCartShown }: Props) => {
   return (
     <>
       <div className="flex min-h-screen font-medium bg-inherit text-inherit p-4 flex-col">
-        <div className="flex flex-row h-min justify-between items-center">
+        <div className="flex flex-row border-b-2 pb-4 border-slate-50 h-min justify-between items-center">
           <h1 className="text-2xl">Your Cart</h1>
           <AiOutlineClose
             className="text-2xl stroke-[3] cursor-pointer"
