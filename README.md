@@ -5,7 +5,7 @@
     <img src="./public/logo.png" alt="Logo" height="80">
   </a>
 
-<h1 align="center">My Hobby Site</h1>
+<h1 align="center">Pixoto Photography Website</h1>
 </div>
 
 ## Table of contents
@@ -13,12 +13,13 @@
 - [Table of contents](#table-of-contents)
 - [About](#about)
 - [Screenshots](#screenshots)
+- [Built with](#built-with)
 - [Links](#links)
 - [License](#license)
 
 ## About
 
-This repository contains a hobby website made a long time ago. Made with HTML and CSS.
+This repository contains a photography website called Pixoto. Made with React, TailwindCSS and NextJS. Fully functional, fully responsive.
 
 ## Screenshots
 
@@ -26,10 +27,19 @@ This repository contains a hobby website made a long time ago. Made with HTML an
 
 ![The app in desktop view](./public/desktop.png)
 
+## Built with
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+
 ## Links
 
-- [Live Preview](https://seesmof.github.io/my-hobby-site/)
+- [Live Preview](https://seesmof.github.io/pixoto-photography-website/)
 - [Icon](https://www.flaticon.com/free-icons/)
+- [Template](https://webflow.com/templates/html/pixoto-photography-website-template)
 
 ## License
 
