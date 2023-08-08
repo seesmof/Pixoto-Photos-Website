@@ -70,8 +70,8 @@ const AboutMe = () => {
   return (
     <>
       <div className="flex py-10 flex-col p-4 bg-backgroundLight">
-        <h3 className="subheading">my services</h3>
-        <h2 className="heading">I have the experience to make of your photo</h2>
+        <h3 className="subheading">Services Offered</h3>
+        <h2 className="heading">Elevating Your Photography to Excellence</h2>
         <button className="btn btn-fill mt-8">
           All Services
           <BsArrowRight className="text-xl" />
