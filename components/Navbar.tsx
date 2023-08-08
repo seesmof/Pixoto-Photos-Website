@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       {isMenuShown && <Menu />}
       {isCartShown && <Cart setIsCartShown={setIsCartShown} />}
-      <div className="flex sticky top-0 flex-row items-center justify-between backdrop-blur-sm bg-slate-900/10 p-4">
+      <div className="flex sticky top-0 flex-row items-center justify-between backdrop-blur-sm bg-slate-900/10 p-4 z-50">
         <Link href="/">
           <img src="/logo.png" className="object-cover w-20" />
         </Link>
