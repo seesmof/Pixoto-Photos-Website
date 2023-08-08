@@ -15,7 +15,7 @@ const AboutMe = () => {
         />
         <h3 className="subheading pt-12">about me</h3>
         <h2 className="heading">
-          We're the leading photo studio in the country
+          We&apos;re the leading photo studio in the country
         </h2>
         <p className="paragraph">
           Welcome to our photography studio, where moments come to life through
@@ -24,7 +24,7 @@ const AboutMe = () => {
           quality and creativity, we believe in the power of images to convey
           emotions and tell narratives. From weddings to corporate events, our
           team is committed to transforming fleeting instants into timeless
-          memories that you'll cherish forever.
+          memories that you&apos;ll cherish forever.
         </p>
         <button className="btn btn-fill">
           Learn More
