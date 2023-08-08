@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import Cart from "./Cart";
 import Menu from "./Menu";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isCartShown, setIsCartShown] = useState(false);
@@ -19,7 +20,13 @@ const Navbar = () => {
       {isCartShown && <Cart setIsCartShown={setIsCartShown} />}
       <div className="flex sticky top-0 flex-row items-center justify-between backdrop-blur-sm bg-slate-900/10 p-4 z-50">
         <Link href="/">
-          <img src="/logo.png" alt="" className="object-cover w-20" />
+          <Image
+            width={999}
+            height={999}
+            src="/logo.png"
+            alt=""
+            className="object-cover w-20"
+          />
         </Link>
         <div className="flex flex-row items-center gap-2 text-2xl">
           <button

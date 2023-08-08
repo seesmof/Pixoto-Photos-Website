@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
@@ -12,10 +13,12 @@ const ServiceCard = ({ image, heading, paragraph }: ServiceCardProps) => {
   return (
     <>
       <div className="bg-background rounded-md p-6 flex flex-col">
-        <img
+        <Image
           src={`/mainServices${image}.svg`}
           alt={`${image} image for a card of services`}
           className="w-16 py-4"
+          height={999}
+          width={999}
         />
         <h3 className="heading">{heading}</h3>
         <p className="text-lg text-slate-200 pt-3 pb-6">{paragraph}</p>

@@ -3,6 +3,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { AiOutlineCamera } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CardProps {
   image: string;
@@ -18,10 +19,12 @@ const Card = ({ image, heading, paragraph, camera, location }: CardProps) => {
       <div className="flex bg-backgroundLight rounded-md overflow-hidden flex-col">
         <div className="h-80 relative">
           <div className="inset-0 bg-gradient-to-t from-black/40 to-transparent absolute"></div>
-          <img
+          <Image
             src={`/mainPortfolio${image}.jpg`}
             alt={`${image} image for a card of portfolio`}
             className="object-cover w-full h-full"
+            height={999}
+            width={999}
           />
         </div>
         <div className="flex flex-col font-medium p-4 text-slate-50">
