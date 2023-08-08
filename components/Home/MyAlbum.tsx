@@ -20,6 +20,7 @@ const Card = ({ image, heading, paragraph, camera, location }: CardProps) => {
           <div className="inset-0 bg-gradient-to-t from-black/40 to-transparent absolute"></div>
           <img
             src={`/mainPortfolio${image}.jpg`}
+            alt={`${image} image for a card of portfolio`}
             className="object-cover w-full h-full"
           />
         </div>
