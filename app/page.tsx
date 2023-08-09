@@ -2,7 +2,7 @@ import AboutMe from "@/components/Home/AboutMe";
 import Hero from "@/components/Home/Hero";
 import Navbar from "@/components/Navbar";
 import MyServices from "@/components/Home/Services";
-import MyAlbum from "@/components/Home/MyAlbum";
+import MyAlbum from "@/components/Home/Portfolio";
 import Contact from "@/components/Home/Contact";
 import Gear from "@/components/Home/Gear";
 import Testimonials from "@/components/Home/Testimony";
