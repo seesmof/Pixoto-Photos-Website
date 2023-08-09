@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
+import { cardBackgroundClasses } from "./data/TestimonyCardData";
+import { linkClasses, paragraphClasses } from "./data/ServiceCardData";
 
 interface ServiceCardProps {
   image: string;
@@ -14,7 +16,7 @@ export const ServiceCard = ({
 }: ServiceCardProps) => {
   return (
     <>
-      <div className="bg-background rounded-md p-6 flex flex-col">
+      <div className={cardBackgroundClasses}>
         <Image
           src={`/mainServices${image}.svg`}
           alt={`${image} image for a card of services`}
@@ -23,11 +25,8 @@ export const ServiceCard = ({
           width={999}
         />
         <h3 className="heading">{heading}</h3>
-        <p className="text-lg text-slate-200 pt-3 pb-6">{paragraph}</p>
-        <a
-          href="https://github.com/seesmof"
-          className="flex flex-row items-center gap-2 font-medium"
-        >
+        <p className={paragraphClasses}>{paragraph}</p>
+        <a href="https://github.com/seesmof" className={linkClasses}>
           Read More
           <BsArrowRight className="text-xl stroke-[.5]" />
         </a>

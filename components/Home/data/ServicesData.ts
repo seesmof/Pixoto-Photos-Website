@@ -36,3 +36,7 @@ export const ServicesData = [
       "Add some flash and pizzazz to your photos with fun prints and customized framing.",
   },
 ];
+export const sectionWrapperClasses =
+  "flex py-10 flex-col p-4 mx-auto max-w-6xl";
+export const cardsGridWrapperClasses =
+  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8";

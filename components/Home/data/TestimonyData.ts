@@ -36,3 +36,7 @@ export const TestimonialsData = [
       "Pixoto knows how to capture the energy and atmosphere of an event. Their photos are vibrant and candid, giving life to every moment from corporate gatherings to social celebrations.",
   },
 ];
+export const sectionWrapperClasses =
+  "flex py-10 flex-col p-4 max-w-6xl container mx-auto";
+export const cardsGridWrapperClasses =
+  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-8";

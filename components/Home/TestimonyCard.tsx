@@ -6,7 +6,17 @@ import {
   nameSubheadingClasses,
 } from "./data/TestimonyCardData";
 
-export const TestimonyCard = ({ name, position, comment }: any) => {
+interface TestimonyCardProps {
+  name: string;
+  position: string;
+  comment: string;
+}
+
+export const TestimonyCard = ({
+  name,
+  position,
+  comment,
+}: TestimonyCardProps) => {
   const randomImageId = Math.floor(Math.random() * 1000);
 
   return (
