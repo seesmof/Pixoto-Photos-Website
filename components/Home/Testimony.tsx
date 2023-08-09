@@ -70,7 +70,7 @@ const Testimonials = () => {
       <div className="flex py-10 flex-col p-4 bg-backgroundLight">
         <h3 className="subheading">Client Testimonials</h3>
         <h2 className="heading">Capturing Moments, Making Memories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-8">
           {TestimonialsData.map((testimonial) => (
             <TestimonyCard {...testimonial} key={testimonial.name} />
           ))}
