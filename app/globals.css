@@ -21,4 +21,7 @@
   .btn-fill {
     @apply bg-slate-50 text-slate-900 border-transparent;
   }
+  .footer-section {
+    @apply uppercase font-bold text-lg;
+  }
 }

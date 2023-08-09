@@ -7,22 +7,20 @@ import Contact from "@/components/Home/Contact";
 import Gear from "@/components/Home/Gear";
 import Testimonials from "@/components/Home/Testimony";
 import Blog from "@/components/Home/Blog";
+import Footer from "@/components/Home/Footer";
 
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen bg-background text-slate-50 flex flex-col">
-        {/* container max-w-6xl */}
-        <Navbar />
-        <Hero />
-        <AboutMe />
-        <MyServices />
-        <MyAlbum />
-        <Contact />
-        <Gear />
-        <Testimonials />
-        <Blog />
-      </div>
+      {/* container max-w-6xl */}
+      <Hero />
+      <AboutMe />
+      <MyServices />
+      <MyAlbum />
+      <Contact />
+      <Gear />
+      <Testimonials />
+      <Blog />
     </>
   );
 }
