@@ -1,9 +1,37 @@
+import Image from "next/image";
 import React from "react";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <>
       <div className="flex p-4 py-10 bg-backgroundLight flex-col text-slate-200">
+        <section className="pb-6 flex flex-col">
+          <Image
+            src="/logo.png"
+            alt="pixoto logo"
+            className="object-cover w-32"
+            width={999}
+            height={999}
+          ></Image>
+          <p className="pt-1 font-medium text-slate-50">
+            Capturing life's moments, frame by frame.
+          </p>
+          <div className="flex flex-row gap-2 pt-4">
+            <a href="#" className="rounded-md p-3 bg-background w-max">
+              <BsFacebook className="text-lg" />
+            </a>
+            <a href="#" className="rounded-md p-3 bg-background w-max">
+              <BsTwitter className="text-lg" />
+            </a>
+            <a href="#" className="rounded-md p-3 bg-background w-max">
+              <BsInstagram className="text-lg" />
+            </a>
+            <a href="#" className="rounded-md p-3 bg-background w-max">
+              <BsLinkedin className="text-lg" />
+            </a>
+          </div>
+        </section>
         <section className="pb-6 flex flex-col">
           <h3 className="footer-section">informational</h3>
           <div className="flex flex-col gap-3 pt-3 font-medium">
@@ -29,7 +57,7 @@ const Footer = () => {
             </a>
           </div>
         </section>
-        <section className="flex flex-col pb-6">
+        <section className="flex flex-col pb-12">
           <h3 className="footer-section">subscribe</h3>
           <p className="pt-2">
             Subscribe to receive updates, access to exclusive deals, and more
