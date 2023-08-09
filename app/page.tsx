@@ -5,6 +5,7 @@ import MyServices from "@/components/Home/MyServices";
 import MyAlbum from "@/components/Home/MyAlbum";
 import Contact from "@/components/Home/Contact";
 import Gear from "@/components/Home/Gear";
+import Testimonials from "@/components/Home/Testimony";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <MyAlbum />
         <Contact />
         <Gear />
+        <Testimonials />
       </div>
     </>
   );
