@@ -21,8 +21,12 @@ const Footer = () => {
             <a href="#">Photography</a>
             <a href="#">Testimonies</a>
             <a href="#">Styles Guide</a>
-            <a href="#">Change Log</a>
-            <a href="#">License</a>
+            <a href="https://github.com/seesmof/pixoto-photography-website/commits/main">
+              Change Log
+            </a>
+            <a href="https://github.com/seesmof/pixoto-photography-website/blob/main/LICENSE">
+              License
+            </a>
           </div>
         </section>
         <section className="flex flex-col pb-6">

@@ -19,7 +19,7 @@
 
 ## About
 
-This repository contains a photography website called Pixoto. Made with React, TailwindCSS and NextJS. Fully functional, fully responsive.
+This repository contains a fully functional website for a professional photography company called Pixoto. It contains multiple pages describing company's vision and showcasing their products in a sleek and modern design. Made with NextJS, TypeScript and TailwindCSS. Fully responsive, built from scratch.
 
 ## Screenshots
 
