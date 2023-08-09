@@ -2,66 +2,77 @@ import Image from "next/image";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-const ServiceCard = ({ name, position, comment }: any) => {
+const TestimonyCard = ({ name, position, comment }: any) => {
+  const randomImageId = Math.floor(Math.random() * 1000);
   return (
-    <>
-      <div className="bg-background rounded-md text-slate-200 p-4 flex flex-col">
-        <h3 className="text-slate-50 text-xl font-medium">{name}</h3>
-        <h3 className="pt-1 pb-3">{position}</h3>
-        <p>{comment}</p>
+    <div className="bg-background rounded-md text-slate-200 p-4 flex flex-col">
+      <div className="flex flex-row items-start gap-4 pb-3">
+        <Image
+          src={`https://picsum.photos/200/200?random=${randomImageId}`}
+          alt="Person's Face"
+          className="w-14 h-14 rounded-full object-cover object-center mb-2"
+          width={999}
+          height={999}
+        />
+
+        <div className="flex flex-col">
+          <h3 className="text-slate-50 text-xl font-medium">{name}</h3>
+          <h3 className="pt-1">{position}</h3>
+        </div>
       </div>
-    </>
+      <p>{comment}</p>
+    </div>
   );
 };
 
 const Testimonials = () => {
-  const ServicesData = [
+  const TestimonialsData = [
     {
-      name: "Tammy Powell",
-      position: "Photographer",
+      name: "John Smith",
+      position: "Fashion Photographer",
       comment:
-        "This is a testimonial! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequuntur doloribus vero, non omnis mollitia magni provident exercitationem nemo qui!",
+        "Working with Pixoto has been an incredible experience. Their attention to detail and creativity truly shine in their work. They captured the essence of my fashion line with precision.",
     },
     {
-      name: "Tammy Powell",
-      position: "Photographer",
+      name: "Emily Johnson",
+      position: "Portrait Photographer",
       comment:
-        "This is a testimonial! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequuntur doloribus vero, non omnis mollitia magni provident exercitationem nemo qui!",
+        "I am amazed by the quality of work Pixoto consistently delivers. Their portraits are breathtaking and they know how to make their subjects feel comfortable and confident during the shoot.",
     },
     {
-      name: "Tammy Powell",
-      position: "Photographer",
+      name: "Michael Lee",
+      position: "Wedding Photographer",
       comment:
-        "This is a testimonial! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequuntur doloribus vero, non omnis mollitia magni provident exercitationem nemo qui!",
+        "Pixoto's team captured every beautiful moment of our special day. The photos tell a story and bring back the emotions and happiness every time we look at them.",
     },
     {
-      name: "Tammy Powell",
-      position: "Photographer",
+      name: "Sophia Rodriguez",
+      position: "Travel Photographer",
       comment:
-        "This is a testimonial! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequuntur doloribus vero, non omnis mollitia magni provident exercitationem nemo qui!",
+        "I've had the pleasure of working with Pixoto on multiple travel projects. Their ability to capture the essence of different cultures and landscapes is truly exceptional.",
     },
     {
-      name: "Tammy Powell",
-      position: "Photographer",
+      name: "Daniel Brown",
+      position: "Food Photographer",
       comment:
-        "This is a testimonial! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequuntur doloribus vero, non omnis mollitia magni provident exercitationem nemo qui!",
+        "Pixoto's attention to detail is impeccable. They made my food creations look absolutely stunning. The photos are so captivating that they make people crave the dishes instantly.",
     },
     {
-      name: "Tammy Powell",
-      position: "Photographer",
+      name: "Aisha Patel",
+      position: "Event Photographer",
       comment:
-        "This is a testimonial! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam consequuntur doloribus vero, non omnis mollitia magni provident exercitationem nemo qui!",
+        "Pixoto knows how to capture the energy and atmosphere of an event. Their photos are vibrant and candid, giving life to every moment from corporate gatherings to social celebrations.",
     },
   ];
 
   return (
     <>
       <div className="flex py-10 flex-col p-4 bg-backgroundLight">
-        <h3 className="subheading">testimonials</h3>
-        <h2 className="heading">What our clients say about us</h2>
+        <h3 className="subheading">Client Testimonials</h3>
+        <h2 className="heading">Capturing Moments, Making Memories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
-          {ServicesData.map((service) => (
-            <ServiceCard {...service} key={service.heading} />
+          {TestimonialsData.map((testimonial) => (
+            <TestimonyCard {...testimonial} key={testimonial.name} />
           ))}
         </div>
       </div>
