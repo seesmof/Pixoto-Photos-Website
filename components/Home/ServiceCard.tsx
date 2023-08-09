@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
-import { cardBackgroundClasses } from "./data/TestimonyCardData";
+import {
+  cardBackgroundClasses,
+  headingClasses,
+} from "./data/TestimonyCardData";
 import { linkClasses, paragraphClasses } from "./data/ServiceCardData";
 
 interface ServiceCardProps {
@@ -24,7 +27,7 @@ export const ServiceCard = ({
           height={999}
           width={999}
         />
-        <h3 className="heading">{heading}</h3>
+        <h3 className={headingClasses}>{heading}</h3>
         <p className={paragraphClasses}>{paragraph}</p>
         <a href="https://github.com/seesmof" className={linkClasses}>
           Read More
