@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import MyServices from "@/components/Home/MyServices";
 import MyAlbum from "@/components/Home/MyAlbum";
 import Contact from "@/components/Home/Contact";
+import Gear from "@/components/Home/Gear";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <MyServices />
         <MyAlbum />
         <Contact />
+        <Gear />
       </div>
     </>
   );
