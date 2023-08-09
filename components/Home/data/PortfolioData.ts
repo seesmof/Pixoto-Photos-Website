@@ -32,3 +32,9 @@ export const PortfolioData = [
     location: "Mountain Lake",
   },
 ];
+export const sectionWrapperClasses =
+  "flex py-10 flex-col p-4 mx-auto max-w-6xl";
+export const cardsGridWrapperClasses =
+  "grid grid-cols-1 md:grid-cols-2 gap-4 py-8";
+export const bottomButtonClasses =
+  "flex font-medium border-b-[1.5px] pb-[2px] self-center text-lg w-max flex-row items-center gap-2";
