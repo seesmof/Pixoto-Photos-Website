@@ -3,6 +3,7 @@ import Hero from "@/components/Home/Hero";
 import Navbar from "@/components/Navbar";
 import MyServices from "@/components/Home/MyServices";
 import MyAlbum from "@/components/Home/MyAlbum";
+import Contact from "@/components/Home/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <AboutMe />
         <MyServices />
         <MyAlbum />
+        <Contact />
       </div>
     </>
   );
