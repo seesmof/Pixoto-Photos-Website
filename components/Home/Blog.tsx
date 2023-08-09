@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import { BsCalendar2 } from "react-icons/bs";
+import { BsArrowRight, BsCalendar2 } from "react-icons/bs";
 
 interface BlogCardProps {
   image: string;
@@ -21,10 +22,20 @@ const BlogCard = ({ image, date, name }: BlogCardProps) => {
           width={999}
         />
         <div className="p-4">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row text-sm items-center gap-2">
             <BsCalendar2 />
-            {date}
+            <span className="pt-[1px]">{date}</span>
           </div>
+          <h2 className="font-medium text-slate-50 text-xl pb-5 pt-2">
+            {name}
+          </h2>
+          <Link
+            href="/"
+            className="flex flex-row items-center gap-2 capitalize"
+          >
+            read more
+            <BsArrowRight className="stroke-[.3]" />
+          </Link>
         </div>
       </div>
     </>
