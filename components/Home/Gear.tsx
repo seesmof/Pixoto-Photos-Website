@@ -24,7 +24,7 @@ const Gear = () => {
   return (
     <>
       <div className="flex py-10 flex-col p-4">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 md:max-w-lg self-center">
           <Image
             src="/mainGearOne.jpg"
             alt="my photo camera"
@@ -54,7 +54,7 @@ const Gear = () => {
           <h2 className="heading">
             Cameras That Have Shaped My Photographic Journey
           </h2>
-          <div className="flex flex-col gap-4 py-8">
+          <div className="grid md:grid-cols-2 gap-4 py-8">
             {GearData.map((gear) => (
               <GearItem name={gear} key={gear} />
             ))}
