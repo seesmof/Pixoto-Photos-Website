@@ -25,6 +25,6 @@
     @apply uppercase font-bold text-lg;
   }
   .layout {
-    @apply max-w-6xl w-11/12 mx-auto;
+    @apply max-w-6xl w-11/12 mx-auto flex flex-col py-10 lg:py-20 xl:py-32;
   }
 }

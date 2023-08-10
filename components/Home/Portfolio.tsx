@@ -41,7 +41,7 @@ const PortfolioData = [
 const Portfolio = () => {
   return (
     <section className="bg-background">
-      <div className="flex py-10 flex-col layout">
+      <div className="layout">
         <h3 className="subheading">Portfolio Showcase</h3>
         <h2 className="heading">
           Captivating Photography Collection by Pixoto Studio

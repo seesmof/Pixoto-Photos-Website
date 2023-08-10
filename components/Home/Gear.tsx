@@ -14,7 +14,7 @@ const GearData = [
 const Gear = () => {
   return (
     <>
-      <div className="flex py-10 flex-col lg:flex-row lg:gap-8 layout">
+      <div className="lg:flex-row lg:gap-8 xl:gap-16 layout">
         <div className="flex flex-row gap-4 md:max-w-lg self-center">
           <Image
             src="/mainGearOne.jpg"

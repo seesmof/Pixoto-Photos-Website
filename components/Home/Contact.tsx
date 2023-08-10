@@ -23,7 +23,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="py-10 bg-[url('/mainContact.png')] bg-auto bg-center">
+      <div className="bg-[url('/mainContact.png')] bg-auto bg-center">
         <div className="flex flex-col md:flex-row md:gap-8 layout">
           <div className="w-max">
             <h3 className="subheading">Simple and Convenient Steps</h3>

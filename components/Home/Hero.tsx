@@ -4,8 +4,8 @@ import { BsArrowRight } from "react-icons/bs";
 const Hero = () => {
   return (
     <section className="bg-center bg-auto bg-[url('/hero.jpg')] bg-norepeat">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col py-12 md:py-20 lg:py-32 xl:py-48 max-w-xs md:max-w-sm lg:max-w-lg">
+      <div className="layout">
+        <div className="flex flex-col max-w-xs md:max-w-sm lg:max-w-lg lg:py-20">
           <h3 className="subheading">welcome to pixoto world</h3>
           <h1 className="heading xl:text-6xl xl:leading-[1.25]">
             We are a digital photography house

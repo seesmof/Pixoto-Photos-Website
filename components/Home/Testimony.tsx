@@ -43,7 +43,7 @@ const TestimonialsData = [
 const Testimonials = () => {
   return (
     <section className="bg-backgroundLight">
-      <div className="flex py-10 flex-col layout">
+      <div className="layout">
         <h3 className="subheading">Client Testimonials</h3>
         <h2 className="heading">Capturing Moments, Making Memories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-8">

@@ -44,7 +44,7 @@ const ServicesData = [
 const Services = () => {
   return (
     <section className="bg-backgroundLight">
-      <div className="flex py-10 flex-col layout">
+      <div className="layout">
         <h3 className="subheading">Services Offered</h3>
         <h2 className="heading">Elevating Your Photography to Excellence</h2>
         <button className="btn btn-fill mt-8">
