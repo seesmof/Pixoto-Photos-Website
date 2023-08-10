@@ -24,4 +24,7 @@
   .footer-section {
     @apply uppercase font-bold text-lg;
   }
+  .layout {
+    @apply max-w-6xl w-11/12 mx-auto;
+  }
 }
