@@ -1,10 +1,9 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { sectionBackgroundClasses } from "./data/HeroData";
 
 const Hero = () => {
   return (
-    <section className={sectionBackgroundClasses}>
+    <section className="bg-center bg-auto bg-[url('/hero.jpg')] bg-norepeat">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col py-12 md:py-20 lg:py-32 xl:py-48 max-w-xs md:max-w-sm lg:max-w-lg">
           <h3 className="subheading">welcome to pixoto world</h3>
