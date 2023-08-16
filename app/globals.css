@@ -7,7 +7,7 @@
     @apply uppercase tracking-widest font-medium text-slate-200;
   }
   .heading {
-    @apply font-medium text-3xl md:text-4xl lg:text-5xl pt-3;
+    @apply font-medium text-3xl pt-3;
   }
   .paragraph {
     @apply pt-6 pb-10 text-lg text-slate-200;
@@ -25,6 +25,6 @@
     @apply uppercase font-bold text-lg;
   }
   .layout {
-    @apply max-w-6xl w-11/12 mx-auto flex flex-col py-10 lg:py-20 xl:py-32;
+    @apply max-w-6xl w-11/12 mx-auto flex flex-col py-10 lg:py-20 xl:py-24 overflow-hidden;
   }
 }

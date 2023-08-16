@@ -24,8 +24,8 @@ const Contact = () => {
   return (
     <>
       <div className="bg-[url('/mainContact.png')] bg-auto bg-center">
-        <div className="flex flex-col md:flex-row md:gap-8 layout">
-          <div className="w-max">
+        <div className="flex flex-col md:flex-row md:gap-8 layout md:items-center">
+          <div className="">
             <h3 className="subheading">Simple and Convenient Steps</h3>
             <h2 className="heading">Need Assistance from Our Photographer?</h2>
           </div>

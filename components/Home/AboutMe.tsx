@@ -5,15 +5,17 @@ import { BsArrowRight } from "react-icons/bs";
 const AboutMe = () => {
   return (
     <>
-      <div className="layout lg:flex-row lg:items-center lg:gap-16 xl:gap-20">
-        <Image
-          src="/mainAboutMe.jpg"
-          alt="a picture of a man standing, holding a camera in his hands, looking in the camera and smiling"
-          className="rounded-full outline outline-offset-[12px] outline-slate-500 outline-1 object-cover self-center max-w-[22rem] md:max-w-lg lg:w-[40%] xl:w-1/2 mt-4"
-          width={999}
-          height={999}
-        />
-        <div className="w-[60%] xl:w-1/2">
+      <div className="layout lg:flex-row lg:gap-16 xl:gap-20">
+        <div className="border border-slate-500 rounded-full p-4 max-w-md self-center">
+          <Image
+            src="/mainAboutMe.jpg"
+            alt="a picture of a man standing, holding a camera in his hands, looking in the camera and smiling"
+            className="rounded-full object-cover self-center"
+            width={999}
+            height={999}
+          />
+        </div>
+        <div className="self-center max-w-xl">
           <h3 className="subheading pt-12 lg:pt-0">about me</h3>
           <h2 className="heading">
             We&apos;re the leading photo studio in the country
