@@ -13,13 +13,13 @@
     @apply pt-6 pb-10 text-lg text-slate-200;
   }
   .btn {
-    @apply rounded-md border-2 px-6 py-3 w-max flex font-medium items-center flex-row gap-2;
+    @apply rounded-md border-2 px-6 py-3 w-max flex font-medium items-center flex-row gap-2 duration-300 active:scale-95;
   }
   .btn-outline {
     @apply bg-transparent border-slate-50 text-slate-50;
   }
   .btn-fill {
-    @apply bg-slate-50 text-slate-900 border-transparent;
+    @apply bg-slate-50 text-slate-900 border-transparent hover:bg-transparent border-slate-50 hover:text-slate-50;
   }
   .footer-section {
     @apply uppercase font-bold text-lg;
