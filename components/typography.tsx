@@ -44,6 +44,10 @@ export function Ul({ children }: { children: React.ReactNode }) {
   return <ul className="my-6 ml-6 list-disc [&>li]:mt-2">{children}</ul>;
 }
 
+export function Ol({ children }: { children: React.ReactNode }) {
+  return <ol className="my-6 ml-6 list-decimal [&>li]:mt-2">{children}</ol>;
+}
+
 export function Code({ children }: { children: React.ReactNode }) {
   return (
     <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
