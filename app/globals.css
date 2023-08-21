@@ -2,35 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .subheading {
-    @apply uppercase tracking-widest font-medium text-slate-200;
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
-  .heading {
-    @apply font-medium text-3xl pt-3;
-  }
-  .paragraph {
-    @apply pt-6 pb-10 text-lg text-slate-200;
-  }
-  .btn {
-    @apply rounded-md border-2 px-6 py-3 w-max flex font-medium items-center flex-row gap-2 duration-300 active:scale-95;
-  }
-  .btn-outline {
-    @apply bg-transparent border-slate-50 text-slate-50;
-  }
-  .btn-fill {
-    @apply bg-slate-50 text-slate-900 border-transparent hover:bg-transparent border-slate-50 hover:text-slate-50;
-  }
-  .btn-red {
-    @apply bg-red-600 text-red-50 border-red-600 hover:bg-red-500 hover:border-red-500;
-  }
-  .btn-yellow {
-    @apply bg-amber-600 text-amber-50 border-amber-600 hover:bg-amber-500 hover:border-amber-500;
-  }
-  .footer-section {
-    @apply uppercase font-bold text-lg;
-  }
-  .layout {
-    @apply max-w-6xl w-11/12 mx-auto flex flex-col py-10 lg:py-20 xl:py-24 overflow-hidden;
-  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
