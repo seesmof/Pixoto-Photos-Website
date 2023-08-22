@@ -22,7 +22,13 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
-import { Terminal, FileWarning, AlertCircle } from "lucide-react";
+import {
+  Terminal,
+  FileWarning,
+  AlertCircle,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
@@ -35,8 +41,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 export default function Home() {
+  const [isCollapsed, setIsCollapsed] = React.useState(false);
+
   return (
     <main className="flex min-h-screen flex-col p-4 gap-4">
       <ThemeToggle />
@@ -95,6 +108,30 @@ export default function Home() {
           <Button variant={"default"}>Confirm</Button>
         </CardFooter>
       </Card>
+
+      <Collapsible>
+        <CollapsibleTrigger
+          className="font-medium leading-none flex items-center gap-2"
+          onClick={() => setIsCollapsed(!isCollapsed)}
+        >
+          {isCollapsed ? (
+            <ChevronUp className="h-5 w-5" />
+          ) : (
+            <ChevronDown className="h-5 w-5" />
+          )}
+          Can I use this in my project?
+        </CollapsibleTrigger>
+        <CollapsibleContent className="mt-2 ml-8">
+          Yes. Free to use for personal and commercial projects. No attribution
+          required.
+        </CollapsibleContent>
+      </Collapsible>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        distinctio inventore hic repellendus eum, vel maiores voluptate
+        reiciendis ducimus pariatur qui porro, dolorum ullam earum ipsam fugiat
+        similique! Odit, eum.
+      </p>
     </main>
   );
 }
