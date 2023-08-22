@@ -46,6 +46,14 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import {
+  Command,
+  CommandEmpty,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import { CommandGroup } from "cmdk";
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
@@ -132,6 +140,18 @@ export default function Home() {
         reiciendis ducimus pariatur qui porro, dolorum ullam earum ipsam fugiat
         similique! Odit, eum.
       </p>
+
+      <Command className="border rounded-md">
+        <CommandInput placeholder="Type a command to run..." />
+        <CommandList className="p-4">
+          <CommandEmpty>No results found</CommandEmpty>
+          <CommandGroup heading="File">
+            <CommandItem>Calendar</CommandItem>
+            <CommandItem>Search Emoji</CommandItem>
+            <CommandItem>Calculator</CommandItem>
+          </CommandGroup>
+        </CommandList>
+      </Command>
     </main>
   );
 }
