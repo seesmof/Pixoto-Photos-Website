@@ -91,13 +91,73 @@ export default function Home() {
     <main className="flex min-h-screen flex-col p-4 gap-4">
       <ThemeToggle />
 
+      <Button variant="default" className="w-max">
+        Open Alert
+      </Button>
+
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <Button variant="default" className="w-max">
+            Open Alert Dialog
+          </Button>
+        </AlertDialogTrigger>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Alert Dialog</AlertDialogTitle>
+            <AlertDialogDescription>
+              This is an alert dialog. It can be dismissed. It can also be
+              closed and confirmed. Please make your choice and click the option
+              you feel like clicking.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction>Confirm</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <Avatar>
+        <AvatarImage src="https://github.com/seesmof.png" alt="@seesmof" />
+        <AvatarFallback>SE</AvatarFallback>
+      </Avatar>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Oleh Onyshchenko</CardTitle>
+          <CardDescription>
+            A capable frontend web developer with a passion for creating
+            responsive, scalable, and accessible web UIs
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex flex-row gap-2 py-2 flex-wrap">
+            <Badge variant="default" className="bg-slate-300">
+              Next.js
+            </Badge>
+            <Badge variant="default" className="bg-blue-200">
+              React
+            </Badge>
+            <Badge variant="default" className="bg-teal-200">
+              TailwindCSS
+            </Badge>
+            <Badge variant="default" className="bg-neutral-300">
+              ShadCN
+            </Badge>
+            <Badge variant="default" className="bg-emerald-200">
+              TypeScript
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
+
       <div className="flex flex-row items-center gap-2">
         <Badge variant="outline">Entertainment</Badge>
         <Badge variant="outline">Fun</Badge>
         <Badge variant="outline">Cool</Badge>
       </div>
 
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-2 flex-wrap">
         <Button variant="default">Default</Button>
         <Button disabled>Disabled</Button>
         <Button variant="outline">Outline</Button>
@@ -164,10 +224,9 @@ export default function Home() {
         </CollapsibleContent>
       </Collapsible>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        distinctio inventore hic repellendus eum, vel maiores voluptate
-        reiciendis ducimus pariatur qui porro, dolorum ullam earum ipsam fugiat
-        similique! Odit, eum.
+        Window crew feet port dollar depth principal anything strike wing forgot
+        mind orange surprise imagine can accident doctor began coast prepare
+        thank fix medicine
       </p>
 
       <Command className="border rounded-lg">
@@ -235,8 +294,8 @@ export default function Home() {
 
       <Dialog>
         <DialogTrigger asChild>
-          <Button variant="default" className="w-auto">
-            Are you sure?
+          <Button variant="default" className="w-max">
+            Open Dialog
           </Button>
         </DialogTrigger>
         <DialogContent>
