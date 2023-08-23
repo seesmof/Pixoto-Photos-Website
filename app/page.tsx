@@ -49,11 +49,11 @@ import {
 import {
   Command,
   CommandEmpty,
+  CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { CommandGroup } from "cmdk";
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
@@ -76,7 +76,7 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row items-center gap-2">
-        <Calendar mode="default" className="rounded-md border cursor-pointer" />
+        <Calendar mode="default" className="rounded-lg border cursor-pointer" />
       </div>
 
       <Card className="w-max">
@@ -141,14 +141,19 @@ export default function Home() {
         similique! Odit, eum.
       </p>
 
-      <Command className="border rounded-md">
+      <Command className="border rounded-lg">
         <CommandInput placeholder="Type a command to run..." />
-        <CommandList className="p-4">
+        <CommandList>
           <CommandEmpty>No results found</CommandEmpty>
           <CommandGroup heading="File">
-            <CommandItem>Calendar</CommandItem>
-            <CommandItem>Search Emoji</CommandItem>
-            <CommandItem>Calculator</CommandItem>
+            <CommandItem className="cursor-pointer">Calendar</CommandItem>
+            <CommandItem className="cursor-pointer">Search Emoji</CommandItem>
+            <CommandItem className="cursor-pointer">Calculator</CommandItem>
+          </CommandGroup>
+          <CommandGroup heading="Edit">
+            <CommandItem className="cursor-pointer">Profile</CommandItem>
+            <CommandItem className="cursor-pointer">Billing</CommandItem>
+            <CommandItem className="cursor-pointer">Settings</CommandItem>
           </CommandGroup>
         </CommandList>
       </Command>
