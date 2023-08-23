@@ -62,6 +62,9 @@ import {
   ContextMenuSeparator,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
+import { DataTable } from "./payments/data-table";
+import { columns } from "./payments/columns";
+import { payments } from "./payments/payment-data";
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
@@ -182,6 +185,8 @@ export default function Home() {
           <ContextMenuLabel>Settings</ContextMenuLabel>
         </ContextMenuContent>
       </ContextMenu>
+
+      <DataTable columns={columns} data={payments} />
     </main>
   );
 }
