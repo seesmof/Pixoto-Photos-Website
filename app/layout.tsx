@@ -3,9 +3,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NextJS APP",
+  title: "Pixoto - Photography Website",
   description:
-    "This is my NextJS app built with TailwindCSS, ShadCN, TypeScript and React.",
+    "Pixoto is a photography portfolio website built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({

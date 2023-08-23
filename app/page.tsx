@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -28,16 +29,21 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Description } from "@radix-ui/react-toast";
 import {
   ArrowRight,
+  Camera,
   ChevronDown,
   ChevronUp,
+  MapPin,
   Menu,
+  Pointer,
   ShoppingCart,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import * as z from "zod";
 
 const MainPage = () => {
   const [isPagesCollapsed, setIsPagesCollapsed] = React.useState(true);
@@ -159,7 +165,7 @@ const MainPage = () => {
         </Button>
       </section>
 
-      <section className="p-4 grid bg-slate-700 py-12">
+      <section className="p-4 grid bg-slate-700 py-10">
         <h3 className="uppercase font-medium">our services</h3>
         <h2 className="text-2xl font-bold mt-2">
           We have the experince you need
@@ -196,8 +202,116 @@ const MainPage = () => {
             description="Balance hunter settlers this said wife funny attack cat experiment loose identity find doubt plastic"
           />
         </div>
+        <Button className="flex flex-row items-center gap-2">
+          Learn more
+          <ArrowRight size={18} strokeWidth={1.4} />
+        </Button>
+      </section>
+
+      <section className="grid p-4 py-10">
+        <h3 className="uppercase font-medium">Portfolio</h3>
+        <h2 className="text-2xl font-bold mt-2">
+          Photography portfolio by Pixoto Studios
+        </h2>
+        <div className="grid gap-4 py-8">
+          <PortfolioCard
+            title="Life in Focus"
+            description="Record ants many layers white lift drink ride cat steady spring"
+            image={1}
+            camera="Sony Alpha"
+            location="Tokyo"
+          />
+          <PortfolioCard
+            title="Faces of the World"
+            description="Interior active cotton tight plates wheel drew hat fence industrial shut island"
+            image={2}
+            camera="Sony Alpha"
+            location="Hämeenlinna"
+          />
+          <PortfolioCard
+            title="Essence of Nature"
+            description="Finally process finger hurt protection across continued take carried settlers lovely"
+            image={3}
+            camera="Sony Alpha"
+            location="Helsinki"
+          />
+          <PortfolioCard
+            title="Reflections of Life"
+            description="Master amount cage pictured star observe basis any pie record sea involved your"
+            image={4}
+            camera="Sony Alpha"
+            location="Bahamas"
+          />
+        </div>
+        <Button className="flex flex-row items-center gap-2">
+          See all
+          <ArrowRight size={18} strokeWidth={1.4} />
+        </Button>
+      </section>
+
+      <section className="grid p-4 py-10 bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
+        <div className="inset-0 absolute bg-slate-900/15"></div>
+        <h3 className="uppercase font-medium">got any questions?</h3>
+        <h2 className="text-2xl font-bold mt-2">Get in touch with us</h2>
+        <Card className="bg-slate-800 p-4 rounded-lg mt-6 grid gap-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+          voluptatibus voluptatem placeat sequi quae deserunt amet nulla
+          debitis! Facere, modi nam sed non ratione illo natus quis distinctio
+          accusantium alias!
+        </Card>
       </section>
     </>
+  );
+};
+
+interface PorfolioCardProps {
+  title: string;
+  description: string;
+  image: number;
+  camera: string;
+  location: string;
+}
+
+const PortfolioCard = ({
+  title,
+  description,
+  image,
+  camera,
+  location,
+}: PorfolioCardProps) => {
+  return (
+    <Card className="bg-inherit relative overflow-hidden rounded-lg p-0">
+      <div className="inset-0 absolute bg-slate-900/20 flex flex-col justify-end p-4">
+        <div className="hidden md:block">
+          <CardTitle>{title}</CardTitle>
+          <CardDescription className="text-base text-slate-200 pt-2">
+            {description}
+          </CardDescription>
+          <div className="flex flex-row items-center gap-2 mt-4">
+            <Badge
+              variant="outline"
+              className="flex px-3 py-1 flex-row border border-slate-500 items-center gap-1"
+            >
+              <Camera size={18} strokeWidth={1.5} />
+              {camera}
+            </Badge>
+            <Badge
+              variant="outline"
+              className="flex px-3 py-1 flex-row border border-slate-500 items-center gap-1"
+            >
+              <MapPin size={18} strokeWidth={1.5} />
+              {location}
+            </Badge>
+          </div>
+        </div>
+      </div>
+      <Image
+        src={`/assets/main-portfolio-${image}.jpg`}
+        alt=""
+        width={1920}
+        height={1080}
+      />
+    </Card>
   );
 };
 
