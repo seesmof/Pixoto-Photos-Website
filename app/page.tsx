@@ -66,6 +66,14 @@ import {
 import { DataTable } from "./payments/data-table";
 import { columns } from "./payments/columns";
 import { payments } from "./payments/payment-data";
+import { spawn } from "child_process";
+import { format } from "date-fns";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
@@ -195,13 +203,26 @@ export default function Home() {
           <Button
             variant={"outline"}
             className={cn(
-              "w-[200px] justify-start text-left font-normal",
-              !date && "text-muted-foreground"
+              "justify-start text-left font-normal",
+              !datePickerDate && "text-muted-foreground"
             )}
           >
-            <CalendarIcon className="h-5 w-5" />
+            <CalendarIcon className="h-4 w-4 mr-2" />
+            {datePickerDate ? (
+              format(datePickerDate, "PPP")
+            ) : (
+              <span>Pick a date</span>
+            )}
           </Button>
         </PopoverTrigger>
+        <PopoverContent className="w-auto p-0">
+          <Calendar
+            mode="single"
+            selected={datePickerDate}
+            onSelect={setDatePickerDate}
+            initialFocus
+          />
+        </PopoverContent>
       </Popover>
     </main>
   );
