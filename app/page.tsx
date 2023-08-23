@@ -58,6 +58,8 @@ import {
   ContextMenu,
   ContextMenuContent,
   ContextMenuItem,
+  ContextMenuLabel,
+  ContextMenuSeparator,
   ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 
@@ -165,15 +167,19 @@ export default function Home() {
       </Command>
 
       <ContextMenu>
-        <ContextMenuTrigger className="w-full border rounded-lg text-center p-6">
+        <ContextMenuTrigger className="w-full border rounded-lg text-center p-6 font-medium">
           Right click
         </ContextMenuTrigger>
         <ContextMenuContent>
           <ContextMenuItem>Profile</ContextMenuItem>
-          <ContextMenuItem>Billing</ContextMenuItem>
           <ContextMenuItem>Team</ContextMenuItem>
-          <ContextMenuItem>Settings</ContextMenuItem>
+          <ContextMenuItem>Rewards</ContextMenuItem>
+          <ContextMenuSeparator />
+          <ContextMenuItem>Billing</ContextMenuItem>
           <ContextMenuItem>Subscribtion</ContextMenuItem>
+          <ContextMenuItem>Files</ContextMenuItem>
+          <ContextMenuSeparator />
+          <ContextMenuLabel>Settings</ContextMenuLabel>
         </ContextMenuContent>
       </ContextMenu>
     </main>
