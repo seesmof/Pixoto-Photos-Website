@@ -54,6 +54,12 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu";
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
@@ -157,6 +163,19 @@ export default function Home() {
           </CommandGroup>
         </CommandList>
       </Command>
+
+      <ContextMenu>
+        <ContextMenuTrigger className="w-full border rounded-lg text-center p-6">
+          Right click
+        </ContextMenuTrigger>
+        <ContextMenuContent>
+          <ContextMenuItem>Profile</ContextMenuItem>
+          <ContextMenuItem>Billing</ContextMenuItem>
+          <ContextMenuItem>Team</ContextMenuItem>
+          <ContextMenuItem>Settings</ContextMenuItem>
+          <ContextMenuItem>Subscribtion</ContextMenuItem>
+        </ContextMenuContent>
+      </ContextMenu>
     </main>
   );
 }
