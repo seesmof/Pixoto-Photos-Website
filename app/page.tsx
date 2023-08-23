@@ -14,6 +14,8 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   NavigationMenu,
   NavigationMenuLink,
@@ -43,7 +45,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import * as z from "zod";
 
 const MainPage = () => {
   const [isPagesCollapsed, setIsPagesCollapsed] = React.useState(true);
@@ -250,15 +251,33 @@ const MainPage = () => {
       </section>
 
       <section className="grid p-4 py-10 bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
-        <div className="inset-0 absolute bg-slate-900/15"></div>
-        <h3 className="uppercase font-medium">got any questions?</h3>
-        <h2 className="text-2xl font-bold mt-2">Get in touch with us</h2>
-        <Card className="bg-slate-800 p-4 rounded-lg mt-6 grid gap-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-          voluptatibus voluptatem placeat sequi quae deserunt amet nulla
-          debitis! Facere, modi nam sed non ratione illo natus quis distinctio
-          accusantium alias!
-        </Card>
+        <div className="inset-0 absolute bg-slate-900/15 z-10"></div>
+        <div className="z-20">
+          <h3 className="uppercase font-medium">got any questions?</h3>
+          <h2 className="text-2xl font-bold mt-2">Get in touch with us</h2>
+          <div className="bg-slate-800 rounded-lg p-4 grid mt-4">
+            <h3 className="font-medium text-lg">Let us know how we can help</h3>
+            <div className="grid gap-2 mt-4">
+              <Label htmlFor="name">Name</Label>
+              <Input
+                type="text"
+                placeholder="Name..."
+                id="name"
+                className="bg-inherit border border-slate-500"
+              />
+            </div>
+            <div className="grid gap-2 mt-3">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                type="email"
+                placeholder="Email..."
+                id="email"
+                className="bg-inherit border border-slate-500"
+              />
+            </div>
+            <Button className="mt-4">Submit</Button>
+          </div>
+        </div>
       </section>
     </>
   );
