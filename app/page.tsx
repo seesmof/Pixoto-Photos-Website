@@ -29,6 +29,9 @@ import {
   ChevronDown,
   ChevronUp,
   CalendarIcon,
+  Twitter,
+  Mail,
+  Facebook,
 } from "lucide-react";
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -88,12 +91,18 @@ export default function Home() {
   const [datePickerDate, setDatePickerDate] = React.useState<Date>();
 
   return (
-    <main className="flex min-h-screen flex-col p-4 gap-4">
+    <main className="flex min-h-screen flex-col p-4 gap-4 max-w-6xl mx-auto">
       <ThemeToggle />
 
-      <Button variant="default" className="w-max">
-        Open Alert
-      </Button>
+      <Alert>
+        <Mail className="w-4 h-4" />
+        <AlertTitle>Alert</AlertTitle>
+        <AlertDescription>
+          This is a default alert. It can be dismissed. Please pay attention to
+          it. Use it whenever you feel like. Usage is not limited to just places
+          where you need it, but also to the places where you don't.
+        </AlertDescription>
+      </Alert>
 
       <AlertDialog>
         <AlertDialogTrigger asChild>
@@ -122,7 +131,7 @@ export default function Home() {
         <AvatarFallback>SE</AvatarFallback>
       </Avatar>
 
-      <Card>
+      <Card className="w-max">
         <CardHeader>
           <CardTitle>Oleh Onyshchenko</CardTitle>
           <CardDescription>
@@ -131,6 +140,15 @@ export default function Home() {
           </CardDescription>
         </CardHeader>
         <CardContent>
+          <h3 className="text-lg font-medium mb-1">Projects</h3>
+          <ul className="flex flex-col list-disc">
+            <li className="ml-4">SpaceX Website</li>
+            <li className="ml-4">Local Clinic Website</li>
+            <li className="ml-4">Social Media App</li>
+            <li className="ml-4">Photography Website</li>
+          </ul>
+
+          <h3 className="text-lg font-medium mt-4">Skills</h3>
           <div className="flex flex-row gap-2 py-2 flex-wrap">
             <Badge variant="default" className="bg-slate-300">
               Next.js
@@ -149,6 +167,23 @@ export default function Home() {
             </Badge>
           </div>
         </CardContent>
+        <CardFooter className="flex flex-col items-start">
+          <h2 className="text-xl font-medium">Feel free to get in touch</h2>
+          <div className="flex flex-row items-center justify-between w-full">
+            <div className="flex flex-row items-center gap-2 pt-2">
+              <Button size="icon" variant={"outline"}>
+                <Twitter className="w-4 h-4" />
+              </Button>
+              <Button size="icon" variant={"outline"}>
+                <Mail className="w-4 h-4" />
+              </Button>
+              <Button size="icon" variant={"outline"}>
+                <Facebook className="w-4 h-4" />
+              </Button>
+            </div>
+            <Button variant={"default"}>Close</Button>
+          </div>
+        </CardFooter>
       </Card>
 
       <div className="flex flex-row items-center gap-2">
