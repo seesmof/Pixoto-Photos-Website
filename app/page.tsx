@@ -28,6 +28,7 @@ import {
   AlertCircle,
   ChevronDown,
   ChevronUp,
+  CalendarIcon,
 } from "lucide-react";
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -68,6 +69,7 @@ import { payments } from "./payments/payment-data";
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
+  const [datePickerDate, setDatePickerDate] = React.useState<Date>();
 
   return (
     <main className="flex min-h-screen flex-col p-4 gap-4">
@@ -187,6 +189,20 @@ export default function Home() {
       </ContextMenu>
 
       <DataTable columns={columns} data={payments} />
+
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button
+            variant={"outline"}
+            className={cn(
+              "w-[200px] justify-start text-left font-normal",
+              !date && "text-muted-foreground"
+            )}
+          >
+            <CalendarIcon className="h-5 w-5" />
+          </Button>
+        </PopoverTrigger>
+      </Popover>
     </main>
   );
 }
