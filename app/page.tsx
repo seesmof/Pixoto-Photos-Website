@@ -104,6 +104,45 @@ export default function Home() {
         </AlertDescription>
       </Alert>
 
+      <Accordion type="single" collapsible>
+        <AccordionItem value="1">
+          <AccordionTrigger>Do we have a main office?</AccordionTrigger>
+          <AccordionContent>
+            Yes we do indeed. You can get the address of our headquarters, which
+            is located in New York City, on our website, please follow the{" "}
+            <a href="#" className="underline">
+              link
+            </a>
+            .
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="2">
+          <AccordionTrigger>Are we hiring?</AccordionTrigger>
+          <AccordionContent>
+            We are indeed. You can get additional information on our{" "}
+            <a href="#" className="underline">
+              website
+            </a>
+            . Please keep in mind that we need only qualified and well-rounded
+            specialists, so please look into the requirements of the job before
+            reaching out.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="3">
+          <AccordionTrigger>How old is our company?</AccordionTrigger>
+          <AccordionContent>
+            Our company is <span className="font-bold">10</span> years old. You
+            can get our full history by following the{" "}
+            <a href="#" className="underline">
+              link
+            </a>
+            . Our company was founded by Patrick Patterson, a remarkable
+            engineer in the field of electrodynamics who decided to contribute
+            his knowledge to the world of photography.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="default" className="w-max">
