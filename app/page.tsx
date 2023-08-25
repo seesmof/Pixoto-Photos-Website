@@ -72,8 +72,8 @@ const MainPage = () => {
 
   return (
     <>
-      <section className="grid bg-cover bg-no-repeat bg-[url('/assets/main-hero-background.jpg')] p-4 bg-center">
-        <div className="max-w-6xl mx-auto w-full">
+      <section className="bg-cover bg-no-repeat bg-[url('/assets/main-hero-background.jpg')] bg-center">
+        <div className="max-w-6xl mx-auto w-full grid p-4">
           <nav className="flex justify-between items-center lg:pt-6">
             <h1 className="text-2xl lg:text-4xl font-bold">
               <Link href="/">Pixoto</Link>
@@ -163,39 +163,43 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="p-4 pb-12 grid">
-        <div className="rounded-full border border-slate-500 p-3 my-6">
-          <Image
-            src="/assets/main-about-me.jpg"
-            alt="an image of a man standing and smiling with a photo camera in hands"
-            width={1920}
-            height={1080}
-            className="rounded-full"
-          />
+      <section>
+        <div className="max-w-6xl mx-auto w-full p-4 pb-12 grid lg:flex lg:items-center lg:gap-12 lg:pt-12">
+          <div className="rounded-full border border-slate-500 p-3 my-6">
+            <Image
+              src="/assets/main-about-me.jpg"
+              alt="an image of a man standing and smiling with a photo camera in hands"
+              width={1920}
+              height={1080}
+              className="rounded-full lg:max-w-md"
+            />
+          </div>
+          <div className="grid">
+            <h3 className="uppercase font-medium lg:text-lg">about us</h3>
+            <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+              Relationship sad would model rhythm appropriate
+            </h2>
+            <p className="mt-6 lg:text-lg">
+              Long interior wheel salt faster describe softly apart blank clock
+              shown attack song letter term climate remain nor beat season leave
+              nuts market activity
+            </p>
+            <p className="mt-2 lg:text-lg">
+              Port guide provide smallest bark why master cry state today region
+              settlers statement zoo nature charge please baby plane cool pick
+              talk tree actually
+            </p>
+            <Button className="flex flex-row items-center gap-2 mt-6 lg:mt-10">
+              Learn more
+              <ArrowRight size={18} strokeWidth={1.4} />
+            </Button>
+          </div>
         </div>
-        <h3 className="uppercase font-medium">about us</h3>
-        <h2 className="text-2xl font-bold mt-2">
-          We are the leading photo studio
-        </h2>
-        <p className="mt-6">
-          Long interior wheel salt faster describe softly apart blank clock
-          shown attack song letter term climate remain nor beat season leave
-          nuts market activity
-        </p>
-        <p className="mt-2">
-          Port guide provide smallest bark why master cry state today region
-          settlers statement zoo nature charge please baby plane cool pick talk
-          tree actually
-        </p>
-        <Button className="flex flex-row items-center gap-2 mt-6">
-          Learn more
-          <ArrowRight size={18} strokeWidth={1.4} />
-        </Button>
       </section>
 
       <section className="p-4 grid bg-slate-700 py-10">
-        <h3 className="uppercase font-medium">our services</h3>
-        <h2 className="text-2xl font-bold mt-2">
+        <h3 className="uppercase font-medium lg:text-lg">our services</h3>
+        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
           We have the experince you need
         </h2>
         <div className="grid gap-4 py-6">
@@ -237,8 +241,8 @@ const MainPage = () => {
       </section>
 
       <section className="grid p-4 py-10">
-        <h3 className="uppercase font-medium">Portfolio</h3>
-        <h2 className="text-2xl font-bold mt-2">
+        <h3 className="uppercase font-medium lg:text-lg">Portfolio</h3>
+        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
           Photography portfolio by Pixoto Studios
         </h2>
         <div className="grid gap-4 py-8">
@@ -280,8 +284,12 @@ const MainPage = () => {
       <section className="grid p-4 py-10 bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
         <div className="inset-0 absolute bg-slate-900/15 z-10"></div>
         <div className="z-20">
-          <h3 className="uppercase font-medium">got any questions?</h3>
-          <h2 className="text-2xl font-bold mt-2">Get in touch with us</h2>
+          <h3 className="uppercase font-medium lg:text-lg">
+            got any questions?
+          </h3>
+          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+            Get in touch with us
+          </h2>
           <div className="bg-slate-800 rounded-lg p-4 grid mt-4">
             <h3 className="font-medium text-lg">Let us know how we can help</h3>
             <div className="grid gap-2 mt-4">
@@ -338,8 +346,8 @@ const MainPage = () => {
           </div>
         </div>
 
-        <h3 className="uppercase font-medium mt-8">our equipment</h3>
-        <h2 className="text-2xl font-bold mt-2">
+        <h3 className="uppercase font-medium lg:text-lg mt-8">our equipment</h3>
+        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
           Cameras that made us who we are
         </h2>
         <div className="grid gap-4 mt-6 font-medium text-lg">
@@ -374,8 +382,8 @@ const MainPage = () => {
       </section>
 
       <section className="p-4 py-10 grid bg-slate-700">
-        <h3 className="uppercase font-medium">testimonials</h3>
-        <h2 className="text-2xl font-bold mt-2">
+        <h3 className="uppercase font-medium lg:text-lg">testimonials</h3>
+        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
           What our clients say about us
         </h2>
         <div className="grid gap-4 mt-6">
@@ -427,8 +435,10 @@ const MainPage = () => {
       </section>
 
       <section className="p-4 py-10 grid">
-        <h3 className="uppercase font-medium">blog and news</h3>
-        <h2 className="text-2xl font-bold mt-2">Latest news and blog</h2>
+        <h3 className="uppercase font-medium lg:text-lg">blog and news</h3>
+        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+          Latest news and blog
+        </h2>
         <div className="grid gap-4 mt-6">
           <div className="overflow-hidden rounded-lg relative">
             <Image
