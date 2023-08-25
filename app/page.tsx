@@ -35,10 +35,12 @@ import {
 import { Description } from "@radix-ui/react-toast";
 import {
   ArrowRight,
+  ArrowUpRight,
   Camera,
   ChevronDown,
   ChevronUp,
   CircleDot,
+  Link2,
   MapPin,
   Menu,
   Pointer,
@@ -398,6 +400,73 @@ const MainPage = () => {
               color club political telephone
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      <section className="p-4 py-10 grid">
+        <h3 className="uppercase font-medium">blog and news</h3>
+        <h2 className="text-2xl font-bold mt-2">Latest news and blog</h2>
+        <div className="grid gap-6 mt-6">
+          <div className="overflow-hidden rounded-lg relative">
+            <Image
+              src="/assets/main-blog-1.jpg"
+              alt="blog photo"
+              width={1920}
+              height={1080}
+              className="object-cover w-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
+              <Link href="/">
+                <h4 className="font-bold text-lg">
+                  Blanket allow good palace simply
+                </h4>
+                <div className="flex items-end gap-1 mt-2">
+                  Read more
+                  <ArrowUpRight size={18} strokeWidth={1.5} />
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-lg relative">
+            <Image
+              src="/assets/main-blog-2.jpg"
+              alt="blog photo"
+              width={1920}
+              height={1080}
+              className="object-cover w-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
+              <Link href="/">
+                <h4 className="font-bold text-lg">
+                  Tomorrow entirely noon line letter giving
+                </h4>
+                <div className="flex items-end gap-1 mt-2">
+                  Read more
+                  <ArrowUpRight size={18} strokeWidth={1.5} />
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-lg relative">
+            <Image
+              src="/assets/main-blog-3.jpg"
+              alt="blog photo"
+              width={1920}
+              height={1080}
+              className="object-cover w-full"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
+              <Link href="/">
+                <h4 className="font-bold text-lg">
+                  Paragraph practical contrast{" "}
+                </h4>
+                <div className="flex items-end gap-1 mt-2">
+                  Read more
+                  <ArrowUpRight size={18} strokeWidth={1.5} />
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
