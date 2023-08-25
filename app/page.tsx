@@ -37,6 +37,7 @@ import {
   Camera,
   ChevronDown,
   ChevronUp,
+  CircleDot,
   MapPin,
   Menu,
   Pointer,
@@ -278,6 +279,72 @@ const MainPage = () => {
             <Button className="mt-4">Submit</Button>
           </div>
         </div>
+      </section>
+
+      <section className="grid p-4 py-10">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4">
+          <div className="row-span-2 col-span-1">
+            <Image
+              src="/assets/main-equipment-1.jpg"
+              alt="camera photo"
+              width={1920}
+              height={1080}
+              className="rounded-full object-cover w-full h-full"
+            />
+          </div>
+          <div className="col-span-1">
+            <Image
+              src="/assets/main-equipment-2.jpg"
+              alt="camera photo"
+              width={1920}
+              height={1080}
+              className="object-cover rounded-t-full rounded-br-full w-full h-full"
+            />
+          </div>
+          <div className="col-span-1">
+            <Image
+              src="/assets/main-equipment-3.jpg"
+              alt="camera photo"
+              width={1920}
+              height={1080}
+              className="object-cover w-full h-full rounded-b-full"
+            />
+          </div>
+        </div>
+
+        <h3 className="uppercase font-medium mt-8">our equipment</h3>
+        <h2 className="text-2xl font-bold mt-2">
+          Cameras that made us who we are
+        </h2>
+        <div className="grid gap-4 mt-6 font-medium text-lg">
+          <div className="flex items-center gap-2">
+            <CircleDot size={18} strokeWidth={2} />
+            Sony ILME-FX30
+          </div>
+          <div className="flex items-center gap-2">
+            <CircleDot size={18} strokeWidth={2} />
+            Samsung ILME-FR7
+          </div>
+          <div className="flex items-center gap-2">
+            <CircleDot size={18} strokeWidth={2} />
+            Alpha 7 IV Full Frame
+          </div>
+          <div className="flex items-center gap-2">
+            <CircleDot size={18} strokeWidth={2} />
+            Sony Alpha 330 DSLR-A330
+          </div>
+          <div className="flex items-center gap-2">
+            <CircleDot size={18} strokeWidth={2} />
+            Lenovo E Yoga LME-FR7
+          </div>
+          <div className="flex items-center gap-2">
+            <CircleDot size={18} strokeWidth={2} />
+            Sony Wide Angle F
+          </div>
+        </div>
+        <Button variant="default" className="mt-6">
+          Learn more
+        </Button>
       </section>
     </>
   );
