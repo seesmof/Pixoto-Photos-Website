@@ -261,15 +261,22 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="grid p-4 py-10 bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
-        <div className="inset-0 absolute bg-slate-900/15 z-10"></div>
-        <div className="z-20">
-          <h3 className="uppercase font-medium lg:text-lg">
-            got any questions?
-          </h3>
-          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
-            Get in touch with us
-          </h2>
+      <section className="bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
+        <div className="inset-0 absolute bg-slate-900/15 lg:bg-slate-900/40"></div>
+        <div className="max-w-6xl mx-auto w-full p-4 grid lg:grid-cols-2 lg:py-14 z-20">
+          <div>
+            <h3 className="uppercase font-medium lg:text-lg">
+              got any questions?
+            </h3>
+            <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+              Using solar however national stiff hope green seldom?
+            </h2>
+            <p className="lg:block lg:text-lg lg:mt-4 hidden">
+              stems story behind room stranger spoken steel fly smell feathers
+              system term city bat everywhere beautiful square grow hill writer
+              local again around only
+            </p>
+          </div>
           <div className="bg-slate-800 rounded-lg p-4 grid mt-4">
             <h3 className="font-medium text-lg">Let us know how we can help</h3>
             <div className="grid gap-2 mt-4">
