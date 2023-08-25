@@ -197,47 +197,49 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="p-4 grid bg-slate-700 py-10">
-        <h3 className="uppercase font-medium lg:text-lg">our services</h3>
-        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
-          We have the experince you need
-        </h2>
-        <div className="grid gap-4 py-6">
-          <ServicesCard
-            image="photography"
-            title="Photography"
-            description="Chair teeth origin nobody would may production whom actual he though through giving pupil using plus"
-          />
-          <ServicesCard
-            image="snapshot-studios"
-            title="Snapshot Studios"
-            description="Apartment sort faster bus lift addition farther sit football many save chance snow sweet cast care"
-          />
-          <ServicesCard
-            image="flash-photography"
-            title="Flash Photography"
-            description="Pink secret ourselves wall blank former history silence particles inch loud difficulty held went"
-          />
-          <ServicesCard
-            image="flashy-frames"
-            title="Flashy Frames"
-            description="Pack college rain cookies be human change suggest teach serious dress deal ask fog former badly kept pitch"
-          />
-          <ServicesCard
-            image="aerial-photography"
-            title="Aerial Photography"
-            description="Railroad list electricity courage merely ship wall old engineer pool lift know against relationship"
-          />
-          <ServicesCard
-            image="videography"
-            title="Videography"
-            description="Balance hunter settlers this said wife funny attack cat experiment loose identity find doubt plastic"
-          />
+      <section className="bg-slate-700">
+        <div className="max-w-6xl mx-auto w-full grid p-4 py-10 lg:py-12">
+          <h3 className="uppercase font-medium lg:text-lg">our services</h3>
+          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+            Shoot comfortable read sheep good person direct up
+          </h2>
+          <div className="grid gap-4 py-6 lg:py-10 lg:grid-cols-3">
+            <ServicesCard
+              image="photography"
+              title="Photography"
+              description="Chair teeth origin nobody would may production whom actual he though through giving pupil using plus"
+            />
+            <ServicesCard
+              image="snapshot-studios"
+              title="Snapshot Studios"
+              description="Apartment sort faster bus lift addition farther sit football many save chance snow sweet cast care"
+            />
+            <ServicesCard
+              image="flash-photography"
+              title="Flash Photography"
+              description="Pink secret ourselves wall blank former history silence particles inch loud difficulty held went"
+            />
+            <ServicesCard
+              image="flashy-frames"
+              title="Flashy Frames"
+              description="Pack college rain cookies be human change suggest teach serious dress deal ask fog former badly kept pitch"
+            />
+            <ServicesCard
+              image="aerial-photography"
+              title="Aerial Photography"
+              description="Railroad list electricity courage merely ship wall old engineer pool lift know against relationship"
+            />
+            <ServicesCard
+              image="videography"
+              title="Videography"
+              description="Balance hunter settlers this said wife funny attack cat experiment loose identity find doubt plastic"
+            />
+          </div>
+          <Button className="flex flex-row items-center gap-2">
+            Learn more
+            <ArrowRight size={18} strokeWidth={1.4} />
+          </Button>
         </div>
-        <Button className="flex flex-row items-center gap-2">
-          Learn more
-          <ArrowRight size={18} strokeWidth={1.4} />
-        </Button>
       </section>
 
       <section className="grid p-4 py-10">
