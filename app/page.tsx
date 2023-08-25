@@ -261,9 +261,8 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
-        <div className="inset-0 absolute bg-slate-900/15 lg:bg-slate-900/40"></div>
-        <div className="max-w-6xl mx-auto w-full p-4 grid lg:grid-cols-2 lg:py-14 z-20">
+      <section className="bg-[url('/assets/main-contact.png')] bg-center bg-no-repeat bg-cover">
+        <div className="max-w-6xl mx-auto w-full p-4 grid lg:grid-cols-2 lg:gap-4 lg:py-14">
           <div>
             <h3 className="uppercase font-medium lg:text-lg">
               got any questions?
@@ -272,7 +271,7 @@ const MainPage = () => {
               Using solar however national stiff hope green seldom?
             </h2>
             <p className="lg:block lg:text-lg lg:mt-4 hidden">
-              stems story behind room stranger spoken steel fly smell feathers
+              Stems story behind room stranger spoken steel fly smell feathers
               system term city bat everywhere beautiful square grow hill writer
               local again around only
             </p>
@@ -285,7 +284,7 @@ const MainPage = () => {
                 type="text"
                 placeholder="Name..."
                 id="name"
-                className="bg-inherit border border-slate-500"
+                className="bg-inherit border border-slate-500 focus:border-slate-200 focus:border-2"
               />
             </div>
             <div className="grid gap-2 mt-3">
@@ -294,7 +293,7 @@ const MainPage = () => {
                 type="email"
                 placeholder="Email..."
                 id="email"
-                className="bg-inherit border border-slate-500"
+                className="bg-inherit border border-slate-500 focus:border-slate-200 focus:border-2"
               />
             </div>
             <Button className="mt-4">Submit</Button>
