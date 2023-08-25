@@ -73,19 +73,11 @@ const MainPage = () => {
   return (
     <>
       <section className="grid bg-cover bg-no-repeat bg-[url('/assets/main-hero-background.jpg')] p-4 bg-center">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto w-full">
           <nav className="flex justify-between items-center lg:pt-6">
             <h1 className="text-2xl lg:text-4xl font-bold">
               <Link href="/">Pixoto</Link>
             </h1>
-            <Menubar>
-              <MenubarMenu>
-                <MenubarTrigger>Trigger Button</MenubarTrigger>
-                <MenubarContent>
-                  <MenubarItem>Title</MenubarItem>
-                </MenubarContent>
-              </MenubarMenu>
-            </Menubar>
             <div className="flex flex-row items-center gap-1">
               <Sheet>
                 <SheetTrigger asChild>
@@ -142,19 +134,19 @@ const MainPage = () => {
             </div>
           </nav>
 
-          <div className="grid py-24 lg:py-48">
+          <div className="grid py-24 lg:py-40 w-full">
             <h2 className="uppercase font-medium lg:text-lg">
               welcome to pixoto world
             </h2>
             <h1 className="text-3xl lg:text-5xl font-bold lg:font-semibold lg:max-w-xl lg:leading-tight mt-2">
               We are a digital photography powerhouse
             </h1>
-            <p className="mt-6">
+            <p className="mt-6 max-w-md lg:text-lg">
               Opposite plain whistle taken better missing ordinary egg fairly
               palace tank indicate date bottom cave experience word service barn
               orbit it news location compass
             </p>
-            <div className="grid mt-8 gap-3">
+            <div className="grid mt-8 gap-3 lg:flex lg:items-center">
               <Button className="flex flex-row items-center gap-2 w-max">
                 Get in touch
                 <ArrowRight size={18} strokeWidth={1.4} />
