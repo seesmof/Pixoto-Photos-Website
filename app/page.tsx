@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -130,7 +131,7 @@ const MainPage = () => {
               variant="outline"
               className="flex flex-row items-center gap-2 w-max bg-transparent border border-slate-200"
             >
-              Get in touch
+              Read more
               <ArrowRight size={18} strokeWidth={1.4} />
             </Button>
           </div>
@@ -345,6 +346,59 @@ const MainPage = () => {
         <Button variant="default" className="mt-6">
           Learn more
         </Button>
+      </section>
+
+      <section className="p-4 py-10 grid bg-slate-700">
+        <h3 className="uppercase font-medium">testimonials</h3>
+        <h2 className="text-2xl font-bold mt-2">
+          What our clients say about us
+        </h2>
+        <div className="grid gap-4 mt-6">
+          <Card className="bg-slate-800">
+            <CardHeader>
+              <CardTitle>Glen Maldonado</CardTitle>
+              <CardDescription>São Tomé and Príncipe</CardDescription>
+            </CardHeader>
+            <CardContent>
+              Garden on nine automobile burst talk mail smile establish mice
+              mark congress matter movie horn gas out send split adjective
+              object curious almost his
+            </CardContent>
+          </Card>
+          <Card className="bg-slate-800">
+            <CardHeader>
+              <CardTitle>Edna Francis</CardTitle>
+              <CardDescription>Ireland</CardDescription>
+            </CardHeader>
+            <CardContent>
+              Frozen escape eat compass card drawn color nuts upon joy bite
+              victory spring wolf since cover sound wagon order might table
+              outline stems remain
+            </CardContent>
+          </Card>
+          <Card className="bg-slate-800">
+            <CardHeader>
+              <CardTitle>Keith Woods</CardTitle>
+              <CardDescription>Maldives</CardDescription>
+            </CardHeader>
+            <CardContent>
+              Pool mill flight atmosphere willing tired lonely fence one journey
+              exact flame stage nose but source iron product realize syllable
+              magnet box just bring
+            </CardContent>
+          </Card>
+          <Card className="bg-slate-800">
+            <CardHeader>
+              <CardTitle>Lina Crawford</CardTitle>
+              <CardDescription>Senegal</CardDescription>
+            </CardHeader>
+            <CardContent>
+              Contain fourth iron yourself smallest repeat key have fairly plain
+              ability means look unit stepped globe desert describe golden fun
+              color club political telephone
+            </CardContent>
+          </Card>
+        </div>
       </section>
     </>
   );
