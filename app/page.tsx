@@ -40,11 +40,16 @@ import {
   ChevronDown,
   ChevronUp,
   CircleDot,
+  Dribbble,
+  Facebook,
+  Instagram,
   Link2,
+  Mail,
   MapPin,
   Menu,
   Pointer,
   ShoppingCart,
+  Twitter,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,7 +62,9 @@ const MainPage = () => {
     <>
       <section className="grid bg-cover bg-no-repeat bg-[url('/assets/main-hero-background.jpg')] p-4 bg-center">
         <nav className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Pixoto</h1>
+          <h1 className="text-2xl font-bold">
+            <Link href="/">Pixoto</Link>
+          </h1>
           <div className="flex flex-row items-center gap-1">
             <Sheet>
               <SheetTrigger asChild>
@@ -420,7 +427,7 @@ const MainPage = () => {
                 <h4 className="font-bold text-lg">
                   Blanket allow good palace simply
                 </h4>
-                <div className="flex items-end gap-1 mt-2">
+                <div className="flex items-end gap-1 mt-1.5">
                   Read more
                   <ArrowUpRight size={18} strokeWidth={1.5} />
                 </div>
@@ -440,7 +447,7 @@ const MainPage = () => {
                 <h4 className="font-bold text-lg">
                   Tomorrow entirely noon line letter giving
                 </h4>
-                <div className="flex items-end gap-1 mt-2">
+                <div className="flex items-end gap-1 mt-1.5">
                   Read more
                   <ArrowUpRight size={18} strokeWidth={1.5} />
                 </div>
@@ -460,7 +467,7 @@ const MainPage = () => {
                 <h4 className="font-bold text-lg">
                   Paragraph practical contrast{" "}
                 </h4>
-                <div className="flex items-end gap-1 mt-2">
+                <div className="flex items-end gap-1 mt-1.5">
                   Read more
                   <ArrowUpRight size={18} strokeWidth={1.5} />
                 </div>
@@ -469,6 +476,66 @@ const MainPage = () => {
           </div>
         </div>
       </section>
+
+      <footer className="p-4 py-10 text-slate-300 grid bg-slate-700">
+        <h2 className="text-3xl font-bold text-slate-200">Pixoto</h2>
+        <p className="mt-2">
+          For upward root correctly according chosen hall crowd desert
+        </p>
+        <div className="flex items-center gap-2 mt-4">
+          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+            <Facebook size={18} strokeWidth={1.5} />
+          </Button>
+          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+            <Instagram size={18} strokeWidth={1.5} />
+          </Button>
+          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+            <Dribbble size={18} strokeWidth={1.5} />
+          </Button>
+          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+            <Twitter size={18} strokeWidth={1.5} />
+          </Button>
+        </div>
+
+        <h3 className="font-bold uppercase mt-8">pages</h3>
+        <div className="grid gap-2 mt-2">
+          <Link href="/">About us</Link>
+          <Link href="/">Services</Link>
+          <Link href="/">Portfolio</Link>
+          <Link href="/">Blog</Link>
+          <Link href="/">Team</Link>
+          <Link href="/">Contact</Link>
+        </div>
+
+        <h3 className="font-bold uppercase mt-8">miscellaneous</h3>
+        <div className="grid gap-2 mt-2">
+          <Link href="/">Photography</Link>
+          <Link href="/">Testimonials</Link>
+          <Link href="/">Styles guide</Link>
+          <Link href="/">Privacy policy</Link>
+        </div>
+
+        <h3 className="font-bold uppercase mt-8">subscribe</h3>
+        <p className="mt-2">
+          Subscribe to our newsletter for the latest news and special offers
+          just for you!
+        </p>
+        <div className="flex items-center gap-2 mt-4">
+          <Input
+            type="email"
+            id="footer-email"
+            placeholder="Your email..."
+            className="bg-inherit border-2 border-slate-500"
+          />
+          <Button
+            variant="default"
+            className="bg-slate-200 hover:bg-slate-300 duration-300 text-slate-900"
+            size={"icon"}
+          >
+            <Mail size={18} strokeWidth={1.5} />
+          </Button>
+        </div>
+      </footer>
     </>
   );
 };
