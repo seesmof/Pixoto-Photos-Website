@@ -413,7 +413,7 @@ const MainPage = () => {
       <section className="p-4 py-10 grid">
         <h3 className="uppercase font-medium">blog and news</h3>
         <h2 className="text-2xl font-bold mt-2">Latest news and blog</h2>
-        <div className="grid gap-6 mt-6">
+        <div className="grid gap-4 mt-6">
           <div className="overflow-hidden rounded-lg relative">
             <Image
               src="/assets/main-blog-1.jpg"
