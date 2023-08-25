@@ -520,18 +520,14 @@ const MainPage = () => {
           Subscribe to our newsletter for the latest news and special offers
           just for you!
         </p>
-        <div className="flex items-center gap-2 mt-4">
+        <div className="flex relative rounded-lg border-2 border-slate-500 items-center gap-2 mt-4">
           <Input
             type="email"
             id="footer-email"
             placeholder="Your email..."
-            className="bg-inherit border-2 border-slate-500"
+            className="bg-inherit border-none"
           />
-          <Button
-            variant="default"
-            className="bg-slate-200 hover:bg-slate-300 duration-300 text-slate-900"
-            size={"icon"}
-          >
+          <Button variant="ghost" size={"icon"}>
             <Mail size={18} strokeWidth={1.5} />
           </Button>
         </div>
