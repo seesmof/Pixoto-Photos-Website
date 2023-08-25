@@ -333,7 +333,7 @@ const MainPage = () => {
             </div>
           </div>
 
-          <div className="">
+          <div>
             <h3 className="uppercase font-medium lg:text-lg mt-8 lg:mt-0">
               our equipment
             </h3>
@@ -373,123 +373,136 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="p-4 py-10 grid bg-slate-700">
-        <h3 className="uppercase font-medium lg:text-lg">testimonials</h3>
-        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
-          What our clients say about us
-        </h2>
-        <div className="grid gap-4 mt-6">
-          <Card className="bg-slate-800">
-            <CardHeader>
-              <CardTitle>Glen Maldonado</CardTitle>
-              <CardDescription>São Tomé and Príncipe</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Garden on nine automobile burst talk mail smile establish mice
-              mark congress matter movie horn gas out send split adjective
-              object curious almost his
-            </CardContent>
-          </Card>
-          <Card className="bg-slate-800">
-            <CardHeader>
-              <CardTitle>Edna Francis</CardTitle>
-              <CardDescription>Ireland</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Frozen escape eat compass card drawn color nuts upon joy bite
-              victory spring wolf since cover sound wagon order might table
-              outline stems remain
-            </CardContent>
-          </Card>
-          <Card className="bg-slate-800">
-            <CardHeader>
-              <CardTitle>Keith Woods</CardTitle>
-              <CardDescription>Maldives</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Pool mill flight atmosphere willing tired lonely fence one journey
-              exact flame stage nose but source iron product realize syllable
-              magnet box just bring
-            </CardContent>
-          </Card>
-          <Card className="bg-slate-800">
-            <CardHeader>
-              <CardTitle>Lina Crawford</CardTitle>
-              <CardDescription>Senegal</CardDescription>
-            </CardHeader>
-            <CardContent>
-              Contain fourth iron yourself smallest repeat key have fairly plain
-              ability means look unit stepped globe desert describe golden fun
-              color club political telephone
-            </CardContent>
-          </Card>
+      <section className="bg-slate-700">
+        <div className="max-w-6xl mx-auto w-full p-4 py-10 lg:py-14">
+          <h3 className="uppercase font-medium lg:text-lg">testimonials</h3>
+          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+            What our clients say about us
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-4 mt-6">
+            <Card className="bg-slate-800">
+              <CardHeader>
+                <CardTitle>Glen Maldonado</CardTitle>
+                <CardDescription>São Tomé and Príncipe</CardDescription>
+              </CardHeader>
+              <CardContent>
+                Garden on nine automobile burst talk mail smile establish mice
+                mark congress matter movie horn gas out send split adjective
+                object curious almost his
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800">
+              <CardHeader>
+                <CardTitle>Edna Francis</CardTitle>
+                <CardDescription>Ireland</CardDescription>
+              </CardHeader>
+              <CardContent>
+                Frozen escape eat compass card drawn color nuts upon joy bite
+                victory spring wolf since cover sound wagon order might table
+                outline stems remain
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800">
+              <CardHeader>
+                <CardTitle>Keith Woods</CardTitle>
+                <CardDescription>Maldives</CardDescription>
+              </CardHeader>
+              <CardContent>
+                Pool mill flight atmosphere willing tired lonely fence one
+                journey exact flame stage nose but source iron product realize
+                syllable magnet box just bring
+              </CardContent>
+            </Card>
+            <Card className="bg-slate-800">
+              <CardHeader>
+                <CardTitle>Lina Crawford</CardTitle>
+                <CardDescription>Senegal</CardDescription>
+              </CardHeader>
+              <CardContent>
+                Contain fourth iron yourself smallest repeat key have fairly
+                plain ability means look unit stepped globe desert describe
+                golden fun color club political telephone
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      <section className="p-4 py-10 grid">
-        <h3 className="uppercase font-medium lg:text-lg">blog and news</h3>
-        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
-          Latest news and blog
-        </h2>
-        <div className="grid gap-4 mt-6">
-          <div className="overflow-hidden rounded-lg relative">
-            <Image
-              src="/assets/main-blog-1.jpg"
-              alt="blog photo"
-              width={1920}
-              height={1080}
-              className="object-cover w-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
-              <Link href="/">
-                <h4 className="font-bold text-lg">
-                  Blanket allow good palace simply
-                </h4>
-                <div className="flex items-end gap-1 mt-1.5">
-                  Read more
-                  <ArrowUpRight size={18} strokeWidth={1.5} />
-                </div>
-              </Link>
+      <section>
+        <div className="max-w-6xl mx-auto w-full grid p-4 py-10 lg:py-14">
+          <h3 className="uppercase font-medium lg:text-lg">blog and news</h3>
+          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+            Latest news and blog
+          </h2>
+          <div className="grid lg:grid-cols-3 gap-4 mt-6">
+            <div className="overflow-hidden rounded-lg relative cursor-pointer group">
+              <Image
+                src="/assets/main-blog-1.jpg"
+                alt="blog photo"
+                width={1920}
+                height={1080}
+                className="object-cover w-full duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
+                <Link href="/">
+                  <h4 className="font-bold text-lg">
+                    Blanket allow good palace simply
+                  </h4>
+                  <div className="w-max relative group overflow-hidden">
+                    <div className="flex items-end gap-1 mt-1.5">
+                      Read more
+                      <ArrowUpRight size={18} strokeWidth={1.5} />
+                    </div>
+                    <div className="h-[1px] hidden lg:block w-24 bg-slate-200 mt-1 duration-300 -translate-x-24 group-hover:translate-x-0"></div>
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="overflow-hidden rounded-lg relative">
-            <Image
-              src="/assets/main-blog-2.jpg"
-              alt="blog photo"
-              width={1920}
-              height={1080}
-              className="object-cover w-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
-              <Link href="/">
-                <h4 className="font-bold text-lg">
-                  Tomorrow entirely noon line letter giving
-                </h4>
-                <div className="flex items-end gap-1 mt-1.5">
-                  Read more
-                  <ArrowUpRight size={18} strokeWidth={1.5} />
-                </div>
-              </Link>
+            <div className="overflow-hidden rounded-lg relative cursor-pointer group">
+              <Image
+                src="/assets/main-blog-2.jpg"
+                alt="blog photo"
+                width={1920}
+                height={1080}
+                className="object-cover w-full duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
+                <Link href="/">
+                  <h4 className="font-bold text-lg">
+                    Tomorrow entirely noon line letter giving
+                  </h4>
+                  <div className="w-max relative group overflow-hidden">
+                    <div className="flex items-end gap-1 mt-1.5">
+                      Read more
+                      <ArrowUpRight size={18} strokeWidth={1.5} />
+                    </div>
+                    <div className="h-[1px] hidden lg:block w-24 bg-slate-200 mt-1 duration-300 -translate-x-24 group-hover:translate-x-0"></div>
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="overflow-hidden rounded-lg relative">
-            <Image
-              src="/assets/main-blog-3.jpg"
-              alt="blog photo"
-              width={1920}
-              height={1080}
-              className="object-cover w-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
-              <Link href="/">
-                <h4 className="font-bold text-lg">
-                  Paragraph practical contrast{" "}
-                </h4>
-                <div className="flex items-end gap-1 mt-1.5">
-                  Read more
-                  <ArrowUpRight size={18} strokeWidth={1.5} />
-                </div>
-              </Link>
+            <div className="overflow-hidden rounded-lg relative cursor-pointer group">
+              <Image
+                src="/assets/main-blog-3.jpg"
+                alt="blog photo"
+                width={1920}
+                height={1080}
+                className="object-cover w-full duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/60 flex flex-col justify-end p-4">
+                <Link href="/">
+                  <h4 className="font-bold text-lg">
+                    Paragraph practical contrast{" "}
+                  </h4>
+                  <div className="w-max relative group overflow-hidden">
+                    <div className="flex items-end gap-1 mt-1.5">
+                      Read more
+                      <ArrowUpRight size={18} strokeWidth={1.5} />
+                    </div>
+                    <div className="h-[1px] hidden lg:block w-24 bg-slate-200 mt-1 duration-300 -translate-x-24 group-hover:translate-x-0"></div>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
