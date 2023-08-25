@@ -198,10 +198,10 @@ const MainPage = () => {
       </section>
 
       <section className="bg-slate-700">
-        <div className="max-w-6xl mx-auto w-full grid p-4 py-10 lg:py-12">
+        <div className="max-w-6xl mx-auto w-full grid p-4 py-10 lg:py-20">
           <h3 className="uppercase font-medium lg:text-lg">our services</h3>
           <h2 className="text-2xl lg:text-4xl font-bold mt-2">
-            Shoot comfortable read sheep good person direct up
+            Shoot comfortable read sheep good person
           </h2>
           <div className="grid gap-4 py-6 lg:py-10 lg:grid-cols-3">
             <ServicesCard
@@ -242,45 +242,23 @@ const MainPage = () => {
         </div>
       </section>
 
-      <section className="grid p-4 py-10">
-        <h3 className="uppercase font-medium lg:text-lg">Portfolio</h3>
-        <h2 className="text-2xl lg:text-4xl font-bold mt-2">
-          Photography portfolio by Pixoto Studios
-        </h2>
-        <div className="grid gap-4 py-8">
-          <PortfolioCard
-            title="Life in Focus"
-            description="Record ants many layers white lift drink ride cat steady spring"
-            image={1}
-            camera="Sony Alpha"
-            location="Tokyo"
-          />
-          <PortfolioCard
-            title="Faces of the World"
-            description="Interior active cotton tight plates wheel drew hat fence industrial shut island"
-            image={2}
-            camera="Sony Alpha"
-            location="Hämeenlinna"
-          />
-          <PortfolioCard
-            title="Essence of Nature"
-            description="Finally process finger hurt protection across continued take carried settlers lovely"
-            image={3}
-            camera="Sony Alpha"
-            location="Helsinki"
-          />
-          <PortfolioCard
-            title="Reflections of Life"
-            description="Master amount cage pictured star observe basis any pie record sea involved your"
-            image={4}
-            camera="Sony Alpha"
-            location="Bahamas"
-          />
+      <section>
+        <div className="grid p-4 py-10 lg:py-20 max-w-6xl mx-auto w-full">
+          <h3 className="uppercase font-medium lg:text-lg">Portfolio</h3>
+          <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+            Photography portfolio by Pixoto Studios
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-4 py-8">
+            <PortfolioCard title="Life in Focus" image={1} />
+            <PortfolioCard title="Faces of the World" image={2} />
+            <PortfolioCard title="Essence of Nature" image={3} />
+            <PortfolioCard title="Reflections of Life" image={4} />
+          </div>
+          <Button className="flex flex-row items-center gap-2">
+            See all
+            <ArrowRight size={18} strokeWidth={1.4} />
+          </Button>
         </div>
-        <Button className="flex flex-row items-center gap-2">
-          See all
-          <ArrowRight size={18} strokeWidth={1.4} />
-        </Button>
       </section>
 
       <section className="grid p-4 py-10 bg-center bg-no-repeat bg-[url('/assets/main-contact.png')] relative">
@@ -566,43 +544,17 @@ const MainPage = () => {
 
 interface PorfolioCardProps {
   title: string;
-  description: string;
   image: number;
-  camera: string;
-  location: string;
 }
 
-const PortfolioCard = ({
-  title,
-  description,
-  image,
-  camera,
-  location,
-}: PorfolioCardProps) => {
+const PortfolioCard = ({ title, image }: PorfolioCardProps) => {
   return (
-    <Card className="bg-inherit relative overflow-hidden rounded-lg p-0">
-      <div className="inset-0 absolute bg-slate-900/20 flex flex-col justify-end p-4">
-        <div className="hidden md:block">
-          <CardTitle>{title}</CardTitle>
-          <CardDescription className="text-base text-slate-200 pt-2">
-            {description}
-          </CardDescription>
-          <div className="flex flex-row items-center gap-2 mt-4">
-            <Badge
-              variant="outline"
-              className="flex px-3 py-1 flex-row border border-slate-500 items-center gap-1"
-            >
-              <Camera size={18} strokeWidth={1.5} />
-              {camera}
-            </Badge>
-            <Badge
-              variant="outline"
-              className="flex px-3 py-1 flex-row border border-slate-500 items-center gap-1"
-            >
-              <MapPin size={18} strokeWidth={1.5} />
-              {location}
-            </Badge>
-          </div>
+    <Card className="bg-inherit group relative overflow-hidden cursor-pointer rounded-lg p-0">
+      <div className="lg:opacity-0 lg:group-hover:opacity-100 lg:duration-300 flex inset-0 absolute bg-slate-900/20 bg-gradient-to-b from-transparent lg:to-slate-900/70 to-slate-900/50 flex-col justify-end p-4">
+        <CardTitle>{title}</CardTitle>
+        <div className="flex items-end gap-1 mt-1">
+          Show more
+          <ArrowUpRight size={18} strokeWidth={1.6} />
         </div>
       </div>
       <Image
