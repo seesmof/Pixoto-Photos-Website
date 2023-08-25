@@ -483,16 +483,16 @@ const MainPage = () => {
           For upward root correctly according chosen hall crowd desert
         </p>
         <div className="flex items-center gap-2 mt-4">
-          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
             <Facebook size={18} strokeWidth={1.5} />
           </Button>
-          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
             <Instagram size={18} strokeWidth={1.5} />
           </Button>
-          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
             <Dribbble size={18} strokeWidth={1.5} />
           </Button>
-          <Button variant="outline" className="bg-slate-800" size={"icon"}>
+          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
             <Twitter size={18} strokeWidth={1.5} />
           </Button>
         </div>
