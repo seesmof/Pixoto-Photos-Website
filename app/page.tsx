@@ -1,8 +1,6 @@
 "use client";
 
 import Footer from "@/components/footer";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,31 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
-import {
-  NavigationMenu,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
@@ -45,25 +20,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useToast } from "@/components/ui/use-toast";
-import { Description } from "@radix-ui/react-toast";
 import {
   ArrowRight,
   ArrowUpRight,
-  Camera,
-  ChevronDown,
-  ChevronUp,
   CircleDot,
-  Dribbble,
-  Facebook,
-  Instagram,
-  Link2,
-  Mail,
-  MapPin,
   Menu,
-  Pointer,
   ShoppingCart,
-  Twitter,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -128,17 +90,7 @@ const MainPage = () => {
               orbit it news location compass
             </p>
             <div className="grid mt-8 gap-3 lg:flex lg:items-center">
-              <Button
-                className="flex flex-row items-center gap-2 w-max"
-                onClick={() => {
-                  toast({
-                    variant: "default",
-                    title: "Succesfully subscribed",
-                    description:
-                      "Your email has been successfully subscribed to our newsletter!",
-                  });
-                }}
-              >
+              <Button className="flex flex-row items-center gap-2 w-max">
                 Get in touch
                 <ArrowRight size={18} strokeWidth={1.4} />
               </Button>
@@ -501,19 +453,6 @@ const MainPage = () => {
 
       <Footer />
     </>
-  );
-};
-
-interface FooterLinkProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-const FooterLink = ({ href, children }: FooterLinkProps) => {
-  return (
-    <Link href={href} className="duration-300 hover:text-slate-200">
-      {children}
-    </Link>
   );
 };
 

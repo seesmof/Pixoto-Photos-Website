@@ -1,13 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import {
-  Dribbble,
-  Facebook,
-  Instagram,
-  Mail,
-  RotateCw,
-  Twitter,
-} from "lucide-react";
+import { Dribbble, Facebook, Instagram, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { useToast } from "./ui/use-toast";
