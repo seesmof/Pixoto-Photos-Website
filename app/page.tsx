@@ -44,6 +44,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useToast } from "@/components/ui/use-toast";
 import { Description } from "@radix-ui/react-toast";
 import {
   ArrowRight,
@@ -68,7 +69,8 @@ import Link from "next/link";
 import * as React from "react";
 
 const MainPage = () => {
-  const [isPagesCollapsed, setIsPagesCollapsed] = React.useState(true);
+  const { toast } = useToast();
+  const emailRef = React.useRef<HTMLInputElement>(null);
 
   return (
     <>
@@ -128,7 +130,17 @@ const MainPage = () => {
               orbit it news location compass
             </p>
             <div className="grid mt-8 gap-3 lg:flex lg:items-center">
-              <Button className="flex flex-row items-center gap-2 w-max">
+              <Button
+                className="flex flex-row items-center gap-2 w-max"
+                onClick={() => {
+                  toast({
+                    variant: "default",
+                    title: "Succesfully subscribed",
+                    description:
+                      "Your email has been successfully subscribed to our newsletter!",
+                  });
+                }}
+              >
                 Get in touch
                 <ArrowRight size={18} strokeWidth={1.4} />
               </Button>
@@ -546,8 +558,23 @@ const MainPage = () => {
                 id="footer-email"
                 placeholder="Your email..."
                 className="bg-inherit border-none"
+                ref={emailRef}
               />
-              <Button variant="ghost" size={"icon"}>
+              <Button
+                variant="ghost"
+                size={"icon"}
+                onClick={() => {
+                  if (emailRef.current) {
+                    toast({
+                      variant: "default",
+                      title: "Succesfully subscribed",
+                      description:
+                        "Your email has been successfully subscribed to our newsletter!",
+                    });
+                    emailRef.current.value = "";
+                  }
+                }}
+              >
                 <Mail size={18} strokeWidth={1.5} />
               </Button>
             </div>
@@ -558,13 +585,12 @@ const MainPage = () => {
   );
 };
 
-const FooterLink = ({
-  href,
-  children,
-}: {
+interface FooterLinkProps {
   href: string;
   children: React.ReactNode;
-}) => {
+}
+
+const FooterLink = ({ href, children }: FooterLinkProps) => {
   return (
     <Link href={href} className="duration-300 hover:text-slate-200">
       {children}
