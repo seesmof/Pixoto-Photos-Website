@@ -1,9 +1,17 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { Dribbble, Facebook, Instagram, Mail, Twitter } from "lucide-react";
+import {
+  Dribbble,
+  Facebook,
+  Instagram,
+  Mail,
+  RotateCw,
+  Twitter,
+} from "lucide-react";
 import Link from "next/link";
 import { Input } from "./ui/input";
 import { useToast } from "./ui/use-toast";
+import { ToastAction } from "./ui/toast";
 
 interface FooterLinkProps {
   href: string;
@@ -18,18 +26,31 @@ const FooterLink = ({ href, children }: FooterLinkProps) => {
   );
 };
 
-const Footer = ({ toast }: { toast: any }) => {
+const Footer = () => {
   const emailRef = React.useRef<HTMLInputElement>(null);
+  const { toast } = useToast();
+  const [emailFailed, setEmailFailed] = React.useState(false);
 
   const handleSubscribe = () => {
-    if (emailRef.current) {
+    const emailRegex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(emailRef.current!.value)) {
+      setEmailFailed(true);
+      toast({
+        variant: "destructive",
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        action: <ToastAction altText="Try again">Dismiss</ToastAction>,
+      });
+    } else {
+      setEmailFailed(false);
+      emailRef.current!.value = "";
       toast({
         variant: "default",
         title: "Succesfully subscribed",
         description:
           "Your email has been successfully subscribed to our newsletter!",
       });
-      emailRef.current.value = "";
     }
   };
 
@@ -86,15 +107,26 @@ const Footer = ({ toast }: { toast: any }) => {
               Subscribe to our newsletter for the latest news and special offers
               just for you!
             </p>
-            <div className="flex relative rounded-lg border-2 border-slate-500 items-center gap-2 mt-4">
+            <div
+              className={`flex relative rounded-lg border-2 items-center gap-2 mt-4 ${
+                emailFailed ? "border-red-600" : "border-slate-500"
+              }`}
+            >
               <Input
                 type="email"
                 id="footer-email"
                 placeholder="Your email..."
-                className="bg-inherit border-none"
+                className={`bg-inherit border-none ${
+                  emailFailed && "placeholder:text-red-600"
+                }`}
+                ref={emailRef}
               />
               <Button variant="ghost" size={"icon"} onClick={handleSubscribe}>
-                <Mail size={18} strokeWidth={1.5} />
+                <Mail
+                  size={18}
+                  strokeWidth={1.5}
+                  className={`${emailFailed && "text-red-600"}`}
+                />
               </Button>
             </div>
           </article>
