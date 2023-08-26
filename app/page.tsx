@@ -106,26 +106,7 @@ const MainPage = () => {
                     <Link href="/">Home</Link>
                     <Link href="/">About</Link>
                     <Link href="/">Shop</Link>
-                    <Collapsible>
-                      <CollapsibleTrigger
-                        className="flex flex-row items-center justify-between w-full pr-6"
-                        onClick={() => setIsPagesCollapsed(!isPagesCollapsed)}
-                      >
-                        Pages
-                        {isPagesCollapsed ? (
-                          <ChevronDown size={22} />
-                        ) : (
-                          <ChevronUp size={22} />
-                        )}
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="grid gap-4 ml-6">
-                        <Link href="/" className="pt-4">
-                          Portfolio
-                        </Link>
-                        <Link href="/">Services</Link>
-                        <Link href="/">Styles Guide</Link>
-                      </CollapsibleContent>
-                    </Collapsible>
+                    <Link href="/">Portfolio</Link>
                     <Link href="/">Blog</Link>
                     <Link href="/">Contact</Link>
                   </div>
