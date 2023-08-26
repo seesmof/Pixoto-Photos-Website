@@ -513,7 +513,7 @@ const MainPage = () => {
           <article className="lg:w-[40%] lg:mr-12">
             <h2 className="text-3xl font-bold text-slate-200">Pixoto</h2>
             <p className="mt-2">
-              For upward root correctly according chosen hall crowd desert
+              For upward root correctly, according chosen hall crowd desert!
             </p>
             <div className="flex items-center gap-2 mt-4">
               <Button variant="ghost" className="bg-slate-700" size={"icon"}>
@@ -534,22 +534,22 @@ const MainPage = () => {
           <article className="lg:w-[20%]">
             <h3 className="font-bold uppercase">pages</h3>
             <div className="grid gap-2 mt-2">
-              <Link href="/">About us</Link>
-              <Link href="/">Services</Link>
-              <Link href="/">Portfolio</Link>
-              <Link href="/">Blog</Link>
-              <Link href="/">Team</Link>
-              <Link href="/">Contact</Link>
+              <FooterLink href="/">About us</FooterLink>
+              <FooterLink href="/">Services</FooterLink>
+              <FooterLink href="/">Portfolio</FooterLink>
+              <FooterLink href="/">Blog</FooterLink>
+              <FooterLink href="/">Team</FooterLink>
+              <FooterLink href="/">Contact</FooterLink>
             </div>
           </article>
 
           <article className="lg:w-[20%]">
             <h3 className="font-bold uppercase">miscellaneous</h3>
             <div className="grid gap-2 mt-2">
-              <Link href="/">Photography</Link>
-              <Link href="/">Testimonials</Link>
-              <Link href="/">Styles guide</Link>
-              <Link href="/">Privacy policy</Link>
+              <FooterLink href="/">Photography</FooterLink>
+              <FooterLink href="/">Testimonials</FooterLink>
+              <FooterLink href="/">Styles guide</FooterLink>
+              <FooterLink href="/">Privacy policy</FooterLink>
             </div>
           </article>
 
@@ -574,6 +574,20 @@ const MainPage = () => {
         </div>
       </footer>
     </>
+  );
+};
+
+const FooterLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <Link href={href} className="duration-300 hover:text-slate-200">
+      {children}
+    </Link>
   );
 };
 
