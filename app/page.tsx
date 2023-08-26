@@ -508,59 +508,69 @@ const MainPage = () => {
         </div>
       </section>
 
-      <footer className="p-4 py-10 text-slate-300 grid bg-slate-700">
-        <h2 className="text-3xl font-bold text-slate-200">Pixoto</h2>
-        <p className="mt-2">
-          For upward root correctly according chosen hall crowd desert
-        </p>
-        <div className="flex items-center gap-2 mt-4">
-          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
-            <Facebook size={18} strokeWidth={1.5} />
-          </Button>
-          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
-            <Instagram size={18} strokeWidth={1.5} />
-          </Button>
-          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
-            <Dribbble size={18} strokeWidth={1.5} />
-          </Button>
-          <Button variant="ghost" className="bg-slate-700" size={"icon"}>
-            <Twitter size={18} strokeWidth={1.5} />
-          </Button>
-        </div>
+      <footer className="text-slate-300 bg-slate-700">
+        <div className="grid lg:flex gap-y-8 lg:gap-x-12 max-w-6xl mx-auto w-full p-4 py-10 lg:py-14">
+          <article className="lg:w-[40%] lg:mr-12">
+            <h2 className="text-3xl font-bold text-slate-200">Pixoto</h2>
+            <p className="mt-2">
+              For upward root correctly according chosen hall crowd desert
+            </p>
+            <div className="flex items-center gap-2 mt-4">
+              <Button variant="ghost" className="bg-slate-700" size={"icon"}>
+                <Facebook size={18} strokeWidth={1.5} />
+              </Button>
+              <Button variant="ghost" className="bg-slate-700" size={"icon"}>
+                <Instagram size={18} strokeWidth={1.5} />
+              </Button>
+              <Button variant="ghost" className="bg-slate-700" size={"icon"}>
+                <Dribbble size={18} strokeWidth={1.5} />
+              </Button>
+              <Button variant="ghost" className="bg-slate-700" size={"icon"}>
+                <Twitter size={18} strokeWidth={1.5} />
+              </Button>
+            </div>
+          </article>
 
-        <h3 className="font-bold uppercase mt-8">pages</h3>
-        <div className="grid gap-2 mt-2">
-          <Link href="/">About us</Link>
-          <Link href="/">Services</Link>
-          <Link href="/">Portfolio</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">Team</Link>
-          <Link href="/">Contact</Link>
-        </div>
+          <article className="lg:w-[20%]">
+            <h3 className="font-bold uppercase">pages</h3>
+            <div className="grid gap-2 mt-2">
+              <Link href="/">About us</Link>
+              <Link href="/">Services</Link>
+              <Link href="/">Portfolio</Link>
+              <Link href="/">Blog</Link>
+              <Link href="/">Team</Link>
+              <Link href="/">Contact</Link>
+            </div>
+          </article>
 
-        <h3 className="font-bold uppercase mt-8">miscellaneous</h3>
-        <div className="grid gap-2 mt-2">
-          <Link href="/">Photography</Link>
-          <Link href="/">Testimonials</Link>
-          <Link href="/">Styles guide</Link>
-          <Link href="/">Privacy policy</Link>
-        </div>
+          <article className="lg:w-[20%]">
+            <h3 className="font-bold uppercase">miscellaneous</h3>
+            <div className="grid gap-2 mt-2">
+              <Link href="/">Photography</Link>
+              <Link href="/">Testimonials</Link>
+              <Link href="/">Styles guide</Link>
+              <Link href="/">Privacy policy</Link>
+            </div>
+          </article>
 
-        <h3 className="font-bold uppercase mt-8">subscribe</h3>
-        <p className="mt-2">
-          Subscribe to our newsletter for the latest news and special offers
-          just for you!
-        </p>
-        <div className="flex relative rounded-lg border-2 border-slate-500 items-center gap-2 mt-4">
-          <Input
-            type="email"
-            id="footer-email"
-            placeholder="Your email..."
-            className="bg-inherit border-none"
-          />
-          <Button variant="ghost" size={"icon"}>
-            <Mail size={18} strokeWidth={1.5} />
-          </Button>
+          <article className="lg:w-[40%]">
+            <h3 className="font-bold uppercase">subscribe</h3>
+            <p className="mt-2">
+              Subscribe to our newsletter for the latest news and special offers
+              just for you!
+            </p>
+            <div className="flex relative rounded-lg border-2 border-slate-500 items-center gap-2 mt-4">
+              <Input
+                type="email"
+                id="footer-email"
+                placeholder="Your email..."
+                className="bg-inherit border-none"
+              />
+              <Button variant="ghost" size={"icon"}>
+                <Mail size={18} strokeWidth={1.5} />
+              </Button>
+            </div>
+          </article>
         </div>
       </footer>
     </>
