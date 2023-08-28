@@ -57,3 +57,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .sectionContainer {
+    @apply max-w-6xl mx-auto w-full grid p-4;
+  }
+  .sectionSubheading {
+    @apply uppercase font-medium lg:text-lg;
+  }
+  .sectionHeading {
+    @apply text-2xl lg:text-4xl font-bold mt-2;
+  }
+}

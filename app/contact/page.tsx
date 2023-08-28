@@ -2,7 +2,6 @@
 
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,7 +10,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
 import { Compass, Mail, Phone } from "lucide-react";
 import React from "react";
@@ -21,7 +19,7 @@ const page = () => {
     <>
       <section className="grid bg-center relative bg-no-repeat bg-cover bg-[url('/assets/contact-header.jpg')]">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-800 z-10"></div>
-        <section className="grid max-w-6xl p-4 mx-auto w-full z-20">
+        <div className="grid max-w-6xl p-4 mx-auto w-full z-20">
           <div className="mb-12">
             <Navbar />
           </div>
@@ -66,7 +64,7 @@ const page = () => {
               </CardHeader>
             </Card>
           </div>
-        </section>
+        </div>
       </section>
 
       <section className="grid max-w-6xl w-full mx-auto p-4 py-12">
