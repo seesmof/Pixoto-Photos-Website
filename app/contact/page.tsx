@@ -2,6 +2,7 @@
 
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Textarea } from "@/components/ui/textarea";
 import { Compass, Mail, Phone } from "lucide-react";
 import React from "react";
@@ -18,9 +20,9 @@ const page = () => {
   return (
     <>
       <main className="min-h-screen">
-        <div className="p-4 grid bg-center relative bg-no-repeat bg-cover bg-[url('/assets/contact-header.jpg')]">
+        <div className="grid bg-center relative bg-no-repeat bg-cover bg-[url('/assets/contact-header.jpg')]">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-800 z-10"></div>
-          <section className="grid max-w-6xl mx-auto w-full z-20">
+          <section className="grid max-w-6xl p-4 mx-auto w-full z-20">
             <div className="mb-12">
               <Navbar />
             </div>
@@ -75,7 +77,7 @@ const page = () => {
             Feel free to get in touch with us at any time
           </h2>
           <div className="grid gap-4 pt-6">
-            <div className="grid gap-4">
+            <div className="grid gap-4 lg:grid-cols-2">
               <Input
                 className="bg-slate-700 border border-slate-500 focus:border-slate-200 focus:border-2"
                 type="text"
@@ -89,7 +91,7 @@ const page = () => {
                 placeholder="Last name *"
               />
             </div>
-            <div className="grid gap-4">
+            <div className="grid gap-4 lg:grid-cols-2">
               <Input
                 className="bg-slate-700 border border-slate-500 focus:border-slate-200 focus:border-2"
                 type="email"
@@ -111,6 +113,7 @@ const page = () => {
             <Button variant="default">Send message</Button>
           </div>
         </section>
+        <div className="bg-amber-500 w-full aspect-video my-12"></div>
         <Footer />
       </main>
     </>
