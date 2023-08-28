@@ -75,12 +75,12 @@ const Footer = () => {
           <article className="lg:w-[20%]">
             <h3 className="font-bold uppercase">pages</h3>
             <div className="grid gap-2 mt-2">
-              <FooterLink href="/">About us</FooterLink>
+              <FooterLink href="/about">About us</FooterLink>
               <FooterLink href="/">Services</FooterLink>
               <FooterLink href="/">Portfolio</FooterLink>
-              <FooterLink href="/">Blog</FooterLink>
+              <FooterLink href="/blog">Blog</FooterLink>
               <FooterLink href="/">Team</FooterLink>
-              <FooterLink href="/">Contact</FooterLink>
+              <FooterLink href="/contact">Contact</FooterLink>
             </div>
           </article>
 

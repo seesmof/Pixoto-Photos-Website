@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,22 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  CircleDot,
-  Menu,
-  ShoppingCart,
-} from "lucide-react";
+import { ArrowRight, ArrowUpRight, CircleDot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
@@ -36,46 +22,7 @@ const MainPage = () => {
     <>
       <section className="bg-cover bg-no-repeat bg-[url('/assets/main-hero-background.jpg')] bg-center">
         <div className="max-w-6xl mx-auto w-full grid p-4">
-          <nav className="flex justify-between items-center lg:pt-6">
-            <h1 className="text-2xl lg:text-4xl font-bold">
-              <Link href="/">Pixoto</Link>
-            </h1>
-            <div className="flex flex-row items-center gap-1">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant={"ghost"} size={"icon"}>
-                    <ShoppingCart size={22} />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="left">
-                  <SheetHeader>
-                    <SheetTitle>Your cart</SheetTitle>
-                    <SheetDescription>
-                      Add items to your cart and they will appear here
-                    </SheetDescription>
-                  </SheetHeader>
-                  <Separator className="my-2" />
-                </SheetContent>
-              </Sheet>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant={"ghost"} size={"icon"}>
-                    <Menu size={22} />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="left">
-                  <div className="grid gap-4">
-                    <Link href="/">Home</Link>
-                    <Link href="/">About</Link>
-                    <Link href="/">Shop</Link>
-                    <Link href="/">Portfolio</Link>
-                    <Link href="/">Blog</Link>
-                    <Link href="/">Contact</Link>
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </nav>
+          <Navbar />
 
           <div className="grid py-24 lg:py-40 w-full">
             <h2 className="uppercase font-medium lg:text-lg">
