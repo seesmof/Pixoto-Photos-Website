@@ -11,10 +11,58 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { useToast } from "@/components/ui/use-toast";
 import { Compass, Mail, Phone } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
-const page = () => {
+interface CopyToClipboardTooltipProps {
+  trigger: string;
+  successMessage?: string;
+}
+
+const CopyToClipboardTooltip = ({
+  trigger,
+  successMessage,
+}: CopyToClipboardTooltipProps) => {
+  const { toast } = useToast();
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <span
+            className="cursor-pointer duration-200 active:scale-95"
+            onClick={() => {
+              navigator.clipboard.writeText(trigger);
+              toast({
+                variant: "default",
+                title: "Copied to clipboard",
+                description: `${
+                  successMessage
+                    ? successMessage.charAt(0).toUpperCase() +
+                      successMessage.slice(1)
+                    : trigger
+                } copied to clipboard`,
+              });
+            }}
+          >
+            {trigger}
+          </span>
+        </TooltipTrigger>
+        <TooltipContent side="left">Copy to clipboard</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+};
+
+const ContactPage = () => {
   return (
     <>
       <section className="grid bg-center relative bg-no-repeat bg-cover bg-[url('/assets/contact-header.jpg')]">
@@ -31,9 +79,18 @@ const page = () => {
                   Address
                 </CardTitle>
                 <CardDescription className="text-slate-200 text-base pt-2">
-                  123 Main Street
-                  <br />
-                  New York, NY 12345
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Link href="#MapSection">
+                          123 Main Street
+                          <br />
+                          New York, NY 12345
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent>View on map</TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -44,9 +101,17 @@ const page = () => {
                   Phone
                 </CardTitle>
                 <CardDescription className="text-slate-200 text-base pt-2">
-                  Mobile: +1 123 456 789
+                  Mobile:{" "}
+                  {CopyToClipboardTooltip({
+                    trigger: "+1 133 005 1996",
+                    successMessage: "Mobile number",
+                  })}
                   <br />
-                  Hotline: +1 123 456 789
+                  Hotline:{" "}
+                  {CopyToClipboardTooltip({
+                    trigger: "+1 133 005 1996",
+                    successMessage: "Hotline number",
+                  })}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -57,9 +122,9 @@ const page = () => {
                   Email
                 </CardTitle>
                 <CardDescription className="text-slate-200 text-base pt-2">
-                  zarfufwe@ges.gn
+                  {CopyToClipboardTooltip({ trigger: "info@pixoto.com" })}
                   <br />
-                  rogivawa@do.gq
+                  {CopyToClipboardTooltip({ trigger: "contact@pixoto.com" })}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -112,7 +177,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className="grid w-full my-12">
+      <section className="grid w-full my-12" id="MapSection">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16049.148558300005!2d-73.99870451382385!3d40.716504528662846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1693239999375!5m2!1suk!2sua"
           width="600"
@@ -129,4 +194,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactPage;
