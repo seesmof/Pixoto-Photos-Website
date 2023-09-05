@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface BlogCardProps {
+export interface BlogCardProps {
   image: number;
   title: string;
   link: string;
@@ -13,7 +13,7 @@ const BlogCard = ({ image, title, link }: BlogCardProps) => {
   return (
     <div className="overflow-hidden rounded-lg relative cursor-pointer group">
       <Image
-        src={`/assets/main-blog-${image}.jpg`}
+        src={`/assets/blog-${image}.jpg`}
         alt="blog photo"
         width={1920}
         height={1080}

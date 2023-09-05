@@ -63,53 +63,6 @@ const CopyToClipboardTooltip = ({
   );
 };
 
-const FormSection = () => {
-  return (
-    <section className="grid max-w-6xl w-full mx-auto p-4 py-12">
-      <h3 className="sectionSubheading">have be any questions?</h3>
-      <h2 className="sectionHeading">
-        Feel free to get in touch with us at any time
-      </h2>
-      <div className="grid gap-4 pt-6">
-        <div className="grid gap-4 lg:grid-cols-2">
-          <Input
-            className="bg-slate-700 border border-slate-500 focus:border-slate-200"
-            type="text"
-            id="firstName"
-            placeholder="First name *"
-          />
-          <Input
-            className="bg-slate-700 border border-slate-500 focus:border-slate-200"
-            type="text"
-            id="lastName"
-            placeholder="Last name *"
-          />
-        </div>
-        <div className="grid gap-4 lg:grid-cols-2">
-          <Input
-            className="bg-slate-700 border border-slate-500 focus:border-slate-200"
-            type="email"
-            id="email"
-            placeholder="Your email *"
-          />
-          <Input
-            className="bg-slate-700 border border-slate-500 focus:border-slate-200"
-            type="text"
-            id="subject"
-            placeholder="Subject"
-          />
-        </div>
-        <Textarea
-          className="bg-slate-700 border border-slate-500 focus:border-slate-200"
-          id="message"
-          placeholder="Your message..."
-        />
-        <Button variant="default">Send message</Button>
-      </div>
-    </section>
-  );
-};
-
 const HeroSection = () => {
   return (
     <HeroSectionWrapper>
@@ -171,6 +124,48 @@ const HeroSection = () => {
           </CardHeader>
         </Card>
       </div>
+      <div className="py-12">
+        <h3 className="sectionSubheading">have be any questions?</h3>
+        <h2 className="sectionHeading">
+          Feel free to get in touch with us at any time
+        </h2>
+        <div className="grid gap-4 pt-6">
+          <div className="grid gap-4 lg:grid-cols-2">
+            <Input
+              className="bg-slate-700 border border-slate-500 focus:border-slate-200"
+              type="text"
+              id="firstName"
+              placeholder="First name *"
+            />
+            <Input
+              className="bg-slate-700 border border-slate-500 focus:border-slate-200"
+              type="text"
+              id="lastName"
+              placeholder="Last name *"
+            />
+          </div>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <Input
+              className="bg-slate-700 border border-slate-500 focus:border-slate-200"
+              type="email"
+              id="email"
+              placeholder="Your email *"
+            />
+            <Input
+              className="bg-slate-700 border border-slate-500 focus:border-slate-200"
+              type="text"
+              id="subject"
+              placeholder="Subject"
+            />
+          </div>
+          <Textarea
+            className="bg-slate-700 border border-slate-500 focus:border-slate-200"
+            id="message"
+            placeholder="Your message..."
+          />
+          <Button variant="default">Send message</Button>
+        </div>
+      </div>
     </HeroSectionWrapper>
   );
 };
@@ -195,7 +190,6 @@ const ContactPage = () => {
   return (
     <>
       <HeroSection />
-      <FormSection />
       <MapSection />
       <Footer />
     </>
