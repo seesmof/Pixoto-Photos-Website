@@ -1,17 +1,56 @@
-import Navbar from "@/components/navbar";
+import BlogCard from "@/components/blog-card";
+import HeroSectionWrapper from "@/components/hero-section-wrapper";
 import * as React from "react";
 
 const BlogPage = () => {
+  const BlogArticlesData = [
+    {
+      image: 1,
+      title: "win energy table earth twelve according father",
+      link: "",
+    },
+    {
+      image: 1,
+      title: "win energy table earth twelve according father",
+      link: "",
+    },
+    {
+      image: 1,
+      title: "win energy table earth twelve according father",
+      link: "",
+    },
+    {
+      image: 1,
+      title: "win energy table earth twelve according father",
+      link: "",
+    },
+    {
+      image: 1,
+      title: "win energy table earth twelve according father",
+      link: "",
+    },
+    {
+      image: 1,
+      title: "win energy table earth twelve according father",
+      link: "",
+    },
+  ];
+
   return (
     <>
-      <section className="grid bg-center relative bg-no-repeat bg-cover bg-[url('/assets/contact-header.jpg')]">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-800 z-10"></div>
-        <div className="grid max-w-6xl p-4 mx-auto w-full z-20">
-          <div className="mb-12">
-            <Navbar />
+      <HeroSectionWrapper>
+        <div className="grid">
+          <h3 className="sectionSubheading">Our blog & news</h3>
+          <h2 className="sectionHeading">
+            Latest news and blog on Photography
+          </h2>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 mt-6">
+            {BlogArticlesData.map((card, index) => (
+              <BlogCard key={index} {...card} />
+            ))}
           </div>
         </div>
-      </section>{" "}
+      </HeroSectionWrapper>
     </>
   );
 };

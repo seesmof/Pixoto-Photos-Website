@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "@/components/footer";
+import HeroSectionWrapper from "@/components/hero-section-wrapper";
 import Navbar from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import {
@@ -65,10 +66,8 @@ const CopyToClipboardTooltip = ({
 const FormSection = () => {
   return (
     <section className="grid max-w-6xl w-full mx-auto p-4 py-12">
-      <h3 className="uppercase font-medium lg:text-lg">
-        have be any questions?
-      </h3>
-      <h2 className="text-2xl lg:text-4xl font-bold mt-2">
+      <h3 className="sectionSubheading">have be any questions?</h3>
+      <h2 className="sectionHeading">
         Feel free to get in touch with us at any time
       </h2>
       <div className="grid gap-4 pt-6">
@@ -113,72 +112,66 @@ const FormSection = () => {
 
 const HeroSection = () => {
   return (
-    <section className="grid bg-center relative bg-no-repeat bg-cover bg-[url('/assets/contact-header.jpg')]">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-800 z-10"></div>
-      <div className="grid max-w-6xl p-4 mx-auto w-full z-20">
-        <div className="mb-12">
-          <Navbar />
-        </div>
-        <div className="gap-4 lg:grid-cols-3 grid">
-          <Card className="bg-slate-700 border-slate-500">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Compass size={18} strokeWidth={2} />
-                Address
-              </CardTitle>
-              <CardDescription className="text-slate-200 text-base pt-2">
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Link href="#MapSection">
-                        123 Main Street
-                        <br />
-                        New York, NY 12345
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>View on map</TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card className="bg-slate-700 border-slate-500">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Phone size={18} strokeWidth={2} />
-                Phone
-              </CardTitle>
-              <CardDescription className="text-slate-200 text-base pt-2">
-                Mobile:{" "}
-                {CopyToClipboardTooltip({
-                  trigger: "+1 133 005 1996",
-                  successMessage: "Mobile number",
-                })}
-                <br />
-                Hotline:{" "}
-                {CopyToClipboardTooltip({
-                  trigger: "+1 133 005 1996",
-                  successMessage: "Hotline number",
-                })}
-              </CardDescription>
-            </CardHeader>
-          </Card>
-          <Card className="bg-slate-700 border-slate-500">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Mail size={18} strokeWidth={2} />
-                Email
-              </CardTitle>
-              <CardDescription className="text-slate-200 text-base pt-2">
-                {CopyToClipboardTooltip({ trigger: "info@pixoto.com" })}
-                <br />
-                {CopyToClipboardTooltip({ trigger: "contact@pixoto.com" })}
-              </CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
+    <HeroSectionWrapper>
+      <div className="gap-4 lg:grid-cols-3 grid">
+        <Card className="bg-slate-700 border-slate-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Compass size={18} strokeWidth={2} />
+              Address
+            </CardTitle>
+            <CardDescription className="text-slate-200 text-base pt-2">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link href="#MapSection">
+                      123 Main Street
+                      <br />
+                      New York, NY 12345
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>View on map</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </CardDescription>
+          </CardHeader>
+        </Card>
+        <Card className="bg-slate-700 border-slate-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Phone size={18} strokeWidth={2} />
+              Phone
+            </CardTitle>
+            <CardDescription className="text-slate-200 text-base pt-2">
+              Mobile:{" "}
+              {CopyToClipboardTooltip({
+                trigger: "+1 133 005 1996",
+                successMessage: "Mobile number",
+              })}
+              <br />
+              Hotline:{" "}
+              {CopyToClipboardTooltip({
+                trigger: "+1 133 005 1996",
+                successMessage: "Hotline number",
+              })}
+            </CardDescription>
+          </CardHeader>
+        </Card>
+        <Card className="bg-slate-700 border-slate-500">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Mail size={18} strokeWidth={2} />
+              Email
+            </CardTitle>
+            <CardDescription className="text-slate-200 text-base pt-2">
+              {CopyToClipboardTooltip({ trigger: "info@pixoto.com" })}
+              <br />
+              {CopyToClipboardTooltip({ trigger: "contact@pixoto.com" })}
+            </CardDescription>
+          </CardHeader>
+        </Card>
       </div>
-    </section>
+    </HeroSectionWrapper>
   );
 };
 
